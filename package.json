@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "playwright": "1.38.0",
+    "@playwright/browser-chromium": "1.38.0",
     "@playwright/test": "^1.38.0",
     "@types/node": "^20.6.2"
   }

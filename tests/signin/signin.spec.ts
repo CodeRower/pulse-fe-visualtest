@@ -1,10 +1,10 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from "@playwright/test";
 
-test('Signin Page', async ({ page }) => {
-  await page.goto('https://pulse-frontend.web.app/auth/signin');
+test("Signin Page", async ({ page }) => {
+  await page.goto("https://pulse-frontend.web.app/auth/signin");
 
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveScreenshot();
+  await expect(page).toHaveScreenshot({ fullPage: true });
 });
 
 // test('get started link', async ({ page }) => {

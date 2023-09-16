@@ -1,0 +1,29 @@
+name: Playwright Tests
+on:
+  push:
+    branches: [main, master]
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16.x"
+      - name: Install dependencies
+        run: yarn
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Run Playwright tests
+        run: yarn playwright test
+      - name: Publish HTML report to testresults.marcusfelling.com
+        if: always() # We want this to always run, even if test fail prior to this step running
+        uses: peaceiris/actions-gh-pages@v3.7.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: playwright-report/ # This is where index.html will be output
+          keep_files: true # Set this to true to make sure we don't wipe out the other content in GitHub Pages
+          user_name: 'github-actions[bot]' # This will be the username that gets stamped in the repo commit
+          user_email: 'github-actions[bot]@users.noreply.github.com' # This will be the user email that gets stamped in the repo commit
+            

@@ -1,4 +1,7 @@
 import { test, expect } from '@playwright/test';
+import { configureSnapshotPath } from '../../utilities/snapshotsConfig';
+
+test.beforeEach(configureSnapshotPath());
 
 test('Signin Page', async ({ page }) => {
   await page.goto('https://pulse-frontend.web.app/auth/signin');

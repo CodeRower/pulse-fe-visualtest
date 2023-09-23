@@ -57,7 +57,44 @@ export default defineConfig({
         },
       },
     },
-
+    {
+      name: "chromium-ipad-landscape",
+      // dependencies: ['setup'],
+      use: {
+        ...devices["Desktop Chrome"],
+        viewport: { width: 768, height: 1024 },
+        launchOptions: {
+          args: [
+            // Configure text rendering so there's no difference between headless and headed (when debugging).
+            "--font-render-hinting=none",
+            "--disable-skia-runtime-opts",
+            "--disable-system-font-check",
+            "--disable-font-subpixel-positioning",
+            "--disable-lcd-text",
+            // "--disable-remote-fonts",
+          ],
+        },
+      },
+    },
+    {
+      name: "chromium-ipad-portrait",
+      // dependencies: ['setup'],
+      use: {
+        ...devices["Desktop Chrome"],
+        viewport: { width: 1024, height: 768 },
+        launchOptions: {
+          args: [
+            // Configure text rendering so there's no difference between headless and headed (when debugging).
+            "--font-render-hinting=none",
+            "--disable-skia-runtime-opts",
+            "--disable-system-font-check",
+            "--disable-font-subpixel-positioning",
+            "--disable-lcd-text",
+            // "--disable-remote-fonts",
+          ],
+        },
+      },
+    },
     // {
     //   name: 'firefox',
     //   use: { ...devices['Desktop Firefox'] },

@@ -1,15 +1,51 @@
 {
+  "cookies": [
+    {
+      "name": "m",
+      "value": "e4fbdf25-f5ec-4438-b13e-d0cc0246d9b3b5950f",
+      "domain": "m.stripe.com",
+      "path": "/",
+      "expires": 1730049137.600203,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__stripe_mid",
+      "value": "919e1f7d-36bc-4ed5-8a0e-117317132577b71e5e",
+      "domain": ".pulse-frontend.web.app",
+      "path": "/",
+      "expires": 1727025137,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "__stripe_sid",
+      "value": "028f9696-1671-4657-82c0-002759bfc6d1a3e40f",
+      "domain": ".pulse-frontend.web.app",
+      "path": "/",
+      "expires": 1695490937,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    }
+  ],
   "origins": [
     {
       "origin": "https://pulse-frontend.web.app",
       "localStorage": [
+        {
+          "name": "tenant",
+          "value": "{\"plan\":\"free\",\"planStatus\":\"active\",\"_id\":\"650856d147b8b57c22792848\",\"name\":\"default\",\"url\":\"default\",\"createdBy\":\"650856d147b8b54bb8792846\",\"updatedBy\":\"650856d147b8b54bb8792846\",\"createdAt\":\"2023-09-18T13:55:29.628Z\",\"updatedAt\":\"2023-09-18T13:55:29.628Z\",\"__v\":0,\"id\":\"650856d147b8b57c22792848\",\"settings\":{\"_id\":\"650856d147b8b5a04179284a\",\"theme\":\"default\",\"tenant\":\"650856d147b8b57c22792848\",\"createdBy\":\"650856d147b8b54bb8792846\",\"backgroundImages\":[],\"logos\":[],\"createdAt\":\"2023-09-18T13:55:29.762Z\",\"updatedAt\":\"2023-09-18T13:55:29.762Z\",\"__v\":0,\"id\":\"650856d147b8b5a04179284a\"}}"
+        },
         {
           "name": "language",
           "value": "en"
         },
         {
           "name": "jwt",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MGYwN2IwMzUxMGRiMGFjMjc3NzkyYyIsImlhdCI6MTY5NTQ4NTUzNywiZXhwIjoxNjk2MDkwMzM3fQ.hj6ZKvKC4sVCKEg-BZTdeg2Kj4FDgX0zh3fOA6kJqO8"
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MGYwN2IwMzUxMGRiMGFjMjc3NzkyYyIsImlhdCI6MTY5NTQ4OTEzOCwiZXhwIjoxNjk2MDkzOTM4fQ.5dZP8nIL9e5L5ozVDUHbZwF7fym_yI4JJYnD2qXIytA"
         }
       ]
     }

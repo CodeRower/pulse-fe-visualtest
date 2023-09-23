@@ -1,18 +1,17 @@
 import { test, expect } from "@playwright/test";
+import { StandardPageObject } from "../../base/StandardPageObject";
+
+const pageUrl = "https://pulse-frontend.web.app/auth/signin";
 
 test("Signin Page", async ({ page }) => {
-  await page.goto("https://pulse-frontend.web.app/auth/signin");
+  await page.goto(pageUrl);
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveScreenshot({ fullPage: true });
 });
 
-// test('get started link', async ({ page }) => {
-//   await page.goto('https://playwright.dev/');
-
-//   // Click the get started link.
-//   await page.getByRole('link', { name: 'Get started' }).click();
-
-//   // Expects page to have a heading with the name of Installation.
-//   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
-// });
+test("Validate Standard Tests", async ({ page }) => {
+  const standardPage = new StandardPageObject(page);
+  await page.goto(pageUrl);
+  await standardPage.executeStandardTests();
+});

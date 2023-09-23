@@ -10,8 +10,9 @@ test("Signin Page", async ({ page }) => {
   await expect(page).toHaveScreenshot({ fullPage: true });
 });
 
-test("Validate Standard Tests", async ({ page }) => {
-  const standardPage = new StandardPageObject(page);
+
+test("Validate Standard Tests", async ({ page }, workerInfo) => {
+  const standardPage = new StandardPageObject(page, workerInfo);
   await page.goto(pageUrl);
   await standardPage.executeStandardTests();
 });

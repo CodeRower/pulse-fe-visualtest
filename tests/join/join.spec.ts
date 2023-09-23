@@ -10,8 +10,9 @@ test("Join Page", async ({ page }) => {
   await expect(page).toHaveScreenshot({ fullPage: true });
 });
 
-test("Validate Primary Buttons", async ({ page }) => {
-  const standardPage = new StandardPageObject(page);
+
+test("Validate Standard Tests", async ({ page }, workerInfo) => {
+  const standardPage = new StandardPageObject(page, workerInfo);
   await page.goto("https://pulse-frontend.web.app/join");
   await standardPage.executeStandardTests();
 });

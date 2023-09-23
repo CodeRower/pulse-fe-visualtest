@@ -1,7 +1,7 @@
 // https://playwright.dev/docs/pom
 // https://playwright.dev/docs/locators
 
-import { test, expect, type Locator, type Page } from "@playwright/test";
+import { test, expect, type Locator, type Page, WorkerInfo } from "@playwright/test";
 import {
   primaryButtonStyles,
   textInputFormControlStyles,
@@ -9,9 +9,13 @@ import {
 
 export class StandardPageObject {
   readonly page: Page;
+  readonly workerInfo: WorkerInfo
+  readonly deviceName: string
 
-  constructor(page: Page) {
+  constructor(page: Page, workerInfo: WorkerInfo) {
     this.page = page;
+    this.workerInfo = workerInfo;
+    this.deviceName = this.workerInfo.project.name;
   }
 
   async executeStandardTests() {
@@ -20,6 +24,7 @@ export class StandardPageObject {
   }
 
   private async validateTextFormFieldsControls() {
+    const deviceSpecificStyles = textInputFormControlStyles[this.deviceName];
     const textInputFormControl = await this.page.locator(
       "input[type='text'].form-control"
     );
@@ -49,10 +54,10 @@ export class StandardPageObject {
           .nth(i)
           .evaluate((element) => window.getComputedStyle(element));
 
-        for (let style in textInputFormControlStyles) {
+        for (let style in deviceSpecificStyles) {
           console.log(`${style} : ${computedStyle[style]}`);
           await expect(computedStyle[style]).toBe(
-            textInputFormControlStyles[style]
+            deviceSpecificStyles[style]
           );
         }
       }
@@ -60,6 +65,8 @@ export class StandardPageObject {
   }
 
   private async validatePrimaryButtons() {
+    const deviceSpecificStyles = primaryButtonStyles[this.deviceName];
+    
     const primaryButtons = await this.page.locator(".btn-success");
 
     const count = await primaryButtons.count();
@@ -86,10 +93,10 @@ export class StandardPageObject {
           .nth(i)
           .evaluate((element) => window.getComputedStyle(element));
 
-        for (let pBtnStyle in primaryButtonStyles) {
+        for (let pBtnStyle in deviceSpecificStyles) {
           // console.log(`${pBtnStyle} : ${computedStyle[pBtnStyle]}`);
           await expect(computedStyle[pBtnStyle]).toBe(
-            primaryButtonStyles[pBtnStyle]
+            deviceSpecificStyles[pBtnStyle]
           );
           // await expect(btn).toHaveCSS(pBtnStyle, primaryButtonStyles[pBtnStyle]);
         }

@@ -1,7 +1,7 @@
 // https://playwright.dev/docs/pom
 // https://playwright.dev/docs/locators
 
-import { expect, type Locator, type Page } from "@playwright/test";
+import { test, expect, type Locator, type Page } from "@playwright/test";
 import {
   primaryButtonStyles,
   textInputFormControlStyles,
@@ -15,8 +15,8 @@ export class StandardPageObject {
   }
 
   async executeStandardTests() {
-    this.validateTextFormFieldsControls();
-    this.validatePrimaryButtons();
+    await this.validateTextFormFieldsControls();
+    await this.validatePrimaryButtons();
   }
 
   private async validateTextFormFieldsControls() {
@@ -24,7 +24,13 @@ export class StandardPageObject {
       "input[type='text'].form-control"
     );
     const count = await textInputFormControl.count();
-    console.log(`validateTextFormFieldsControls FOUND: ${count}`);
+    // console.log(`validateTextFormFieldsControls FOUND: ${count}`);
+    test
+      .info()
+      .annotations.push({
+        type: `FOUND: ${count} TextFormFieldsControls`,
+        description: "validateTextFormFieldsControls",
+      });
 
     if (textInputFormControl && count > 0) {
       for (let i = 0; i < count; ++i) {
@@ -32,13 +38,19 @@ export class StandardPageObject {
           .nth(i)
           .getAttribute("name");
         console.log(`VALIDATING: ${nameOfElement}`);
+        // test
+        //   .info()
+        //   .annotations.push({
+        //     type: `VALIDATING: ${nameOfElement}`,
+        //     description: "validateTextFormFieldsControls",
+        //   });
 
         const computedStyle = await textInputFormControl
           .nth(i)
           .evaluate((element) => window.getComputedStyle(element));
 
         for (let style in textInputFormControlStyles) {
-          //   console.log(`${style} : ${computedStyle[style]}`);
+          console.log(`${style} : ${computedStyle[style]}`);
           await expect(computedStyle[style]).toBe(
             textInputFormControlStyles[style]
           );
@@ -51,12 +63,24 @@ export class StandardPageObject {
     const primaryButtons = await this.page.locator(".btn-success");
 
     const count = await primaryButtons.count();
-    console.log(`validatePrimaryButtons FOUND: ${count}`);
+    // console.log(`validatePrimaryButtons FOUND: ${count}`);
+    test
+      .info()
+      .annotations.push({
+        type: `FOUND: ${count} PrimaryButtons`,
+        description: "validatePrimaryButtons",
+      });
 
     if (primaryButtons && count > 0) {
       for (let i = 0; i < count; ++i) {
         const nameOfElement = await primaryButtons.nth(i).textContent();
         console.log(`VALIDATING: ${nameOfElement}`);
+        // test
+        //   .info()
+        //   .annotations.push({
+        //     type: `VALIDATING: ${nameOfElement}`,
+        //     description: "validatePrimaryButtons",
+        //   });
 
         const computedStyle = await primaryButtons
           .nth(i)

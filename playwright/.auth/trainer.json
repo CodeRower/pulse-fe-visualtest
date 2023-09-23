@@ -1,0 +1,17 @@
+{
+  "origins": [
+    {
+      "origin": "https://pulse-frontend.web.app",
+      "localStorage": [
+        {
+          "name": "language",
+          "value": "en"
+        },
+        {
+          "name": "jwt",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MGYwN2IwMzUxMGRiMGFjMjc3NzkyYyIsImlhdCI6MTY5NTQ4NTUzNywiZXhwIjoxNjk2MDkwMzM3fQ.hj6ZKvKC4sVCKEg-BZTdeg2Kj4FDgX0zh3fOA6kJqO8"
+        }
+      ]
+    }
+  ]
+}

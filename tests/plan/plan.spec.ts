@@ -3,7 +3,7 @@ import { StandardPageObject } from "../../base/StandardPageObject";
 import { testUser } from "../../utilities/appConstants";
 
 const pageUrl = "https://pulse-frontend.web.app/plan";
-test.only("Plan Page", async ({ page }) => {
+test("Plan Page", async ({ page }) => {
   await page.goto("https://pulse-frontend.web.app/auth/signin");
 
   await page.getByPlaceholder("Email").fill(testUser.email);

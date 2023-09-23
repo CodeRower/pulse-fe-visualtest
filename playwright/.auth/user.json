@@ -1,0 +1,53 @@
+{
+  "cookies": [
+    {
+      "name": "m",
+      "value": "b24be59c-51d1-4837-8418-44129b33bfa177ae9c",
+      "domain": "m.stripe.com",
+      "path": "/",
+      "expires": 1730047193.30823,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__stripe_mid",
+      "value": "242cf4f8-a0dc-4225-a6a5-bd15a6a9f1427c373c",
+      "domain": ".pulse-frontend.web.app",
+      "path": "/",
+      "expires": 1727023193,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "__stripe_sid",
+      "value": "40e51701-a129-422d-87e6-ced5222b2d268b7576",
+      "domain": ".pulse-frontend.web.app",
+      "path": "/",
+      "expires": 1695488993,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://pulse-frontend.web.app",
+      "localStorage": [
+        {
+          "name": "tenant",
+          "value": "{\"plan\":\"free\",\"planStatus\":\"active\",\"_id\":\"650856d147b8b57c22792848\",\"name\":\"default\",\"url\":\"default\",\"createdBy\":\"650856d147b8b54bb8792846\",\"updatedBy\":\"650856d147b8b54bb8792846\",\"createdAt\":\"2023-09-18T13:55:29.628Z\",\"updatedAt\":\"2023-09-18T13:55:29.628Z\",\"__v\":0,\"id\":\"650856d147b8b57c22792848\",\"settings\":{\"_id\":\"650856d147b8b5a04179284a\",\"theme\":\"default\",\"tenant\":\"650856d147b8b57c22792848\",\"createdBy\":\"650856d147b8b54bb8792846\",\"backgroundImages\":[],\"logos\":[],\"createdAt\":\"2023-09-18T13:55:29.762Z\",\"updatedAt\":\"2023-09-18T13:55:29.762Z\",\"__v\":0,\"id\":\"650856d147b8b5a04179284a\"}}"
+        },
+        {
+          "name": "language",
+          "value": "en"
+        },
+        {
+          "name": "jwt",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MGYwN2IwMzUxMGRiMGFjMjc3NzkyYyIsImlhdCI6MTY5NTQ4NzE5MywiZXhwIjoxNjk2MDkxOTkzfQ.x3Q4e37pjM0wWbCLmmhdJPwoL7o9-9FP-vTLijM8DUc"
+        }
+      ]
+    }
+  ]
+}

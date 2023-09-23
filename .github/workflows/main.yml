@@ -20,7 +20,7 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install-deps
       - name: Run Playwright tests
-        run: yarn playwright test
+        run: npx playwright test
       - name: Publish HTML report to coderower.github.io/pulse-fe-visualtes
         if: always() # We want this to always run, even if test fail prior to this step running
         uses: peaceiris/actions-gh-pages@v3.7.3

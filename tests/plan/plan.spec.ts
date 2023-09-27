@@ -8,7 +8,7 @@ test("Plan Page", async ({ page }) => {
 
   await page.getByPlaceholder("Email").fill(testUser.email);
   await page.getByPlaceholder("Password").fill(testUser.password);
-  await page.getByRole("button", { name: " Log in with E-mail" }).click();
+  await page.getByRole("button", { name: " Log in with email" }).click();
   await page.goto("https://pulse-frontend.web.app/plan");
 
   // Expect a title "to contain" a substring.

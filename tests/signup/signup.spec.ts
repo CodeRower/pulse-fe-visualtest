@@ -26,7 +26,7 @@ test("test invalid email", async ({ page }) => {
   await page.getByPlaceholder("Email").fill("test@");
   await page.getByPlaceholder("Password").click();
   await page.getByPlaceholder("Password").fill("123456");
-  await page.getByRole("button", { name: " Sign Up with E-mail" }).click();
+  await page.getByRole("button", { name: " Sign Up with email" }).click();
 
   await expect(page).toHaveScreenshot({ fullPage: true });
 });

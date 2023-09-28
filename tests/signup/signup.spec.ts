@@ -30,3 +30,21 @@ test("test invalid email", async ({ page }) => {
 
   await expect(page).toHaveScreenshot({ fullPage: true });
 });
+
+test('test invalid password', async ({ page }) => {
+  await page.goto(pageUrl);
+  // await page.locator('.col-6').click();
+  await page.getByPlaceholder('First Name').click();
+  await page.getByPlaceholder('First Name').fill('Rana');
+  await page.getByPlaceholder('Last Name').click();
+  await page.getByPlaceholder('Last Name').fill('Mahato');
+  await page.getByPlaceholder('Email').click();
+  await page.getByPlaceholder('Email').fill('rana@gmail.com');
+  await page.getByPlaceholder('Password').click();
+  await page.getByPlaceholder('Password').fill('12dew');
+  await page.getByPlaceholder('Email').click();
+  await page.getByPlaceholder('Email').fill('rana@gmail.com');
+  await page.getByRole('button', { name: ' Sign Up with email' }).click();
+  
+  await expect(page).toHaveScreenshot({ fullPage: true });
+});

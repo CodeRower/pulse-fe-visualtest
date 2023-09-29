@@ -1,19 +1,35 @@
 export const primaryButtonStyles = {
   chromium: {
-    backgroundColor: "rgb(43, 95, 71)",
+    backgroundColor: "#2B5F47",
     borderRadius: "800px",
+    color: "#fff",
+    height: "64px",
+    fontSize: "20px",
+    fontWeight: "600",
   },
   "chromium-ipad-landscape": {
-    backgroundColor: "rgb(43, 95, 71)",
+    backgroundColor: "#2B5F47",
     borderRadius: "800px",
+    color: "#fff",
+    height: "64px",
+    fontSize: "20px",
+    fontWeight: "600",
   },
   "chromium-ipad-portrait": {
-    backgroundColor: "rgb(43, 95, 71)",
+    backgroundColor: "#2B5F47",
     borderRadius: "800px",
+    color: "#fff",
+    height: "64px",
+    fontSize: "20px",
+    fontWeight: "600",
   },
   MobileChrome: {
-    backgroundColor: "rgb(43, 95, 71)",
+    backgroundColor: "#2B5F47",
     borderRadius: "800px",
+    color: "#fff",
+    height: "36px",
+    fontSize: "16px",
+    fontWeight: "600",
   },
 };
 

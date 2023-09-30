@@ -148,7 +148,7 @@ export const mediumButtonStyles = {
     height: "56px",
     fontSize: "16px",
     fontWeight: "500",
-    
+    padding : "16px 32px"
   },
   "chromium-ipad-landscape": {
     backgroundColor: "#2B5F47",
@@ -157,6 +157,8 @@ export const mediumButtonStyles = {
     height: "56px",
     fontSize: "16px",
     fontWeight: "500",
+    padding : "16px 32px",
+    
   },
   "chromium-ipad-portrait": {
     backgroundColor: "#2B5F47",
@@ -165,6 +167,7 @@ export const mediumButtonStyles = {
     height: "56px",
     fontSize: "16px",
     fontWeight: "500",
+    padding : "16px 32px"
   },
   MobileChrome: {
     backgroundColor: "#2B5F47",
@@ -173,6 +176,7 @@ export const mediumButtonStyles = {
     height: "32px",
     fontSize: "14px",
     fontWeight: "500",
+    padding : "6px 12px"
   },
 
 }
@@ -186,6 +190,7 @@ export const lighButtonStyles = {
     height: "56px",
     fontSize: "16px",
     fontWeight: "500",
+    padding : "16px 32px"
   },
   "chromium-ipad-landscape": {
     backgroundColor: "#EAEFED",
@@ -194,6 +199,7 @@ export const lighButtonStyles = {
     height: "56px",
     fontSize: "16px",
     fontWeight: "500",
+    padding : "16px 32px"
   },
   "chromium-ipad-portrait": {
     backgroundColor: "#EAEFED",
@@ -202,6 +208,7 @@ export const lighButtonStyles = {
     height: "56px",
     fontSize: "16px",
     fontWeight: "500",
+    padding : "16px 32px"
 
   },
   MobileChrome: {
@@ -211,6 +218,7 @@ export const lighButtonStyles = {
     height: "32px",
     fontSize: "14px",
     fontWeight: "500",
+    padding : "6px 12px"
   },
 
 }
@@ -225,7 +233,7 @@ export const bordButtonStyles = {
     height: "56px",
     fontSize: "16px",
     fontWeight: "500" ,
-    
+    padding : "16px 32px"
   },
   "chromium-ipad-landscape": {
     backgroundColor: "#EAEFED",
@@ -234,6 +242,7 @@ export const bordButtonStyles = {
     height: "56px",
     fontSize: "16px",
     fontWeight: "500",
+    padding : "16px 32px"
   },
   "chromium-ipad-portrait": {
     backgroundColor: "#EAEFED",
@@ -242,7 +251,7 @@ export const bordButtonStyles = {
     height: "56px",
     fontSize: "16px",
     fontWeight: "500",
-
+    padding : "16px 32px"
   },
   MobileChrome: {
     backgroundColor: "#EAEFED",
@@ -251,6 +260,7 @@ export const bordButtonStyles = {
     height: "32px",
     fontSize: "14px",
     fontWeight: "500",
+    padding : "6px 12px"
   },
 
 }
@@ -264,7 +274,7 @@ export const smallButtonStyles = {
     height: "44px",
     fontSize: "16px",
     fontWeight: "500",
-    
+    padding : "12px 24px"
   },
   "chromium-ipad-landscape": {
     backgroundColor: "#2B5F47",
@@ -273,6 +283,7 @@ export const smallButtonStyles = {
     height: "44px",
     fontSize: "16px",
     fontWeight: "500",
+    padding : "12px 24px"
   },
   "chromium-ipad-portrait": {
     backgroundColor: "#2B5F47",
@@ -281,6 +292,7 @@ export const smallButtonStyles = {
     height: "44px",
     fontSize: "16px",
     fontWeight: "500",
+    padding : "12px 24px"
   },
   MobileChrome: {
     backgroundColor: "#2B5F47",
@@ -289,6 +301,7 @@ export const smallButtonStyles = {
     height: "24px",
     fontSize: "13px",
     fontWeight: "500",
+    padding : "4px 8px"
   },
 
 }
@@ -302,7 +315,7 @@ export const LigButtonStyles = {
     height: "44px",
     fontSize: "16px",
     fontWeight: "500",
-    
+    padding : "12px 24px"
   },
   "chromium-ipad-landscape": {
     backgroundColor: "#EAEFED",
@@ -311,6 +324,7 @@ export const LigButtonStyles = {
     height: "44px",
     fontSize: "16px",
     fontWeight: "500",
+    padding : "12px 24px"
   },
   "chromium-ipad-portrait": {
     backgroundColor: "#EAEFED",
@@ -319,6 +333,7 @@ export const LigButtonStyles = {
     height: "44px",
     fontSize: "16px",
     fontWeight: "500",
+    padding : "12px 24px"
   },
   MobileChrome: {
     backgroundColor: "#EAEFED",
@@ -327,6 +342,7 @@ export const LigButtonStyles = {
     height: "24px",
     fontSize: "13px",
     fontWeight: "500",
+    padding : "4px 8px"
   },
 
 }
@@ -340,7 +356,7 @@ export const borButtonStyles = {
     height: "44px",
     fontSize: "16px",
     fontWeight: "500",
-    
+    padding : "12px 24px"
   },
   "chromium-ipad-landscape": {
     backgroundColor: "#2B5F47",
@@ -349,6 +365,7 @@ export const borButtonStyles = {
     height: "44px",
     fontSize: "16px",
     fontWeight: "500",
+    padding : "12px 24px"
   },
   "chromium-ipad-portrait": {
     backgroundColor: "#2B5F47",
@@ -357,6 +374,7 @@ export const borButtonStyles = {
     height: "44px",
     fontSize: "16px",
     fontWeight: "500",
+    padding : "12px 24px"
   },
   MobileChrome: {
     backgroundColor: "#2B5F47",
@@ -365,6 +383,7 @@ export const borButtonStyles = {
     height: "24px",
     fontSize: "13px",
     fontWeight: "500",
+    padding : "4px 8px"
   },
 
 }

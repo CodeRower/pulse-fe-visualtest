@@ -57,12 +57,12 @@ export const primaryButtonStyles = {
 
 };
 
-//for light button
+//for light color
 export const lightButtonStyles = {
   chromium: {
     backgroundColor: "#EAEFED",
     borderRadius: "800px",
-    color: "#fff",
+    color: "#2B5F47",
     height: "64px",
     fontSize: "20px",
     fontWeight: "600",
@@ -71,7 +71,7 @@ export const lightButtonStyles = {
   "chromium-ipad-landscape": {
     backgroundColor: "#EAEFED",
     borderRadius: "800px",
-    color: "#fff",
+    color: "#2B5F47",
     height: "64px",
     fontSize: "20px",
     fontWeight: "600",
@@ -80,7 +80,7 @@ export const lightButtonStyles = {
   "chromium-ipad-portrait": {
     backgroundColor: "#EAEFED",
     borderRadius: "800px",
-    color: "#fff",
+    color: "#2B5F47",
     height: "64px",
     fontSize: "20px",
     fontWeight: "600",
@@ -89,7 +89,7 @@ export const lightButtonStyles = {
   MobileChrome: {
     backgroundColor: "#EAEFED",
     borderRadius: "800px",
-    color: "#fff",
+    color: "#2B5F47",
     height: "36px",
     fontSize: "16px",
     fontWeight: "600",
@@ -101,36 +101,43 @@ export const lightButtonStyles = {
 //for border color
 export const borderButtonStyles = {
   chromium: {
-    backgroundColor: "#2B5F47",
+    backgroundColor: "#fff",
     borderRadius: "800px",
-    color: "#fff",
+    color: "#2B5F47",
+    borderColor : '#2B5F47',
     height: "64px",
     fontSize: "20px",
     fontWeight: "600",
     padding : "20px 64px"
   },
   "chromium-ipad-landscape": {
-    backgroundColor: "#2B5F47",
+    backgroundColor: "#fff",
     borderRadius: "800px",
-    color: "#fff",
+    // color: "#fff",
+    color: "#2B5F47",
+    borderColor : '#2B5F47',
     height: "64px",
     fontSize: "20px",
     fontWeight: "600",
     padding : "20px 64px"
   },
   "chromium-ipad-portrait": {
-    backgroundColor: "#2B5F47",
+    backgroundColor: "#fff",
     borderRadius: "800px",
-    color: "#fff",
+    // color: "#fff",
+    color: "#2B5F47",
+    borderColor : '#2B5F47',
     height: "64px",
     fontSize: "20px",
     fontWeight: "600",
     padding : "20px 64px"
   },
   MobileChrome: {
-    backgroundColor: "#2B5F47",
+    backgroundColor: "#fff",
     borderRadius: "800px",
-    color: "#fff",
+    // color: "#fff",
+    color: "#2B5F47",
+    borderColor : '#2B5F47',
     height: "36px",
     fontSize: "16px",
     fontWeight: "600",
@@ -181,12 +188,12 @@ export const mediumButtonStyles = {
 
 }
 
-//light button
+//light color
 export const lighButtonStyles = {
   chromium: {
     backgroundColor: "#EAEFED",
     borderRadius: "800px",
-    color: "#fff",
+    color: "#2B5F47",
     height: "56px",
     fontSize: "16px",
     fontWeight: "500",
@@ -195,7 +202,8 @@ export const lighButtonStyles = {
   "chromium-ipad-landscape": {
     backgroundColor: "#EAEFED",
     borderRadius: "800px",
-    color: "#fff",
+    // color: "#fff",
+    color: "#2B5F47",
     height: "56px",
     fontSize: "16px",
     fontWeight: "500",
@@ -204,7 +212,8 @@ export const lighButtonStyles = {
   "chromium-ipad-portrait": {
     backgroundColor: "#EAEFED",
     borderRadius: "800px",
-    color: "#fff",
+    // color: "#fff",
+    color: "#2B5F47",
     height: "56px",
     fontSize: "16px",
     fontWeight: "500",
@@ -214,7 +223,8 @@ export const lighButtonStyles = {
   MobileChrome: {
     backgroundColor: "#EAEFED",
     borderRadius: "800px",
-    color: "#fff",
+    // color: "#fff",
+    color: "#2B5F47",
     height: "32px",
     fontSize: "14px",
     fontWeight: "500",
@@ -227,16 +237,18 @@ export const lighButtonStyles = {
 
 export const bordButtonStyles = {
   chromium: {
-    backgroundColor: "#EAEFED",
+    backgroundColor: "#fff",
     borderRadius: "800px",
-    color: "#fff",
+    // color: "#fff",
+    color: "#2B5F47",
+    borderColor : '#2B5F47',
     height: "56px",
     fontSize: "16px",
     fontWeight: "500" ,
     padding : "16px 32px"
   },
   "chromium-ipad-landscape": {
-    backgroundColor: "#EAEFED",
+    backgroundColor: "#fff",
     borderRadius: "800px",
     color: "#fff",
     height: "56px",
@@ -245,18 +257,22 @@ export const bordButtonStyles = {
     padding : "16px 32px"
   },
   "chromium-ipad-portrait": {
-    backgroundColor: "#EAEFED",
+    backgroundColor: "#fff",
     borderRadius: "800px",
-    color: "#fff",
+    // color: "#fff",
+    color: "#2B5F47",
+    borderColor : '#2B5F47',
     height: "56px",
     fontSize: "16px",
     fontWeight: "500",
     padding : "16px 32px"
   },
   MobileChrome: {
-    backgroundColor: "#EAEFED",
+    backgroundColor: "#fff",
     borderRadius: "800px",
-    color: "#fff",
+    // color: "#fff",
+    color: "#2B5F47",
+    borderColor : '#2B5F47',
     height: "32px",
     fontSize: "14px",
     fontWeight: "500",
@@ -311,7 +327,7 @@ export const LigButtonStyles = {
   chromium: {
     backgroundColor: "#EAEFED",
     borderRadius: "800px",
-    color: "#fff",
+     color: "#2B5F47",
     height: "44px",
     fontSize: "16px",
     fontWeight: "500",
@@ -320,7 +336,7 @@ export const LigButtonStyles = {
   "chromium-ipad-landscape": {
     backgroundColor: "#EAEFED",
     borderRadius: "800px",
-    color: "#fff",
+    color: "#2B5F47",
     height: "44px",
     fontSize: "16px",
     fontWeight: "500",
@@ -329,7 +345,7 @@ export const LigButtonStyles = {
   "chromium-ipad-portrait": {
     backgroundColor: "#EAEFED",
     borderRadius: "800px",
-    color: "#fff",
+    color: "#2B5F47",
     height: "44px",
     fontSize: "16px",
     fontWeight: "500",
@@ -338,7 +354,7 @@ export const LigButtonStyles = {
   MobileChrome: {
     backgroundColor: "#EAEFED",
     borderRadius: "800px",
-    color: "#fff",
+    color: "#2B5F47",
     height: "24px",
     fontSize: "13px",
     fontWeight: "500",
@@ -350,7 +366,7 @@ export const LigButtonStyles = {
 //border color
 export const borButtonStyles = {
   chromium: {
-    backgroundColor: "#2B5F47",
+    backgroundColor: "#fff",
     borderRadius: "800px",
     color: "#fff",
     height: "44px",
@@ -359,27 +375,33 @@ export const borButtonStyles = {
     padding : "12px 24px"
   },
   "chromium-ipad-landscape": {
-    backgroundColor: "#2B5F47",
+    backgroundColor: "#fff",
     borderRadius: "800px",
-    color: "#fff",
+    // color: "#fff",
+    color: "#2B5F47",
+    borderColor : '#2B5F47',
     height: "44px",
     fontSize: "16px",
     fontWeight: "500",
     padding : "12px 24px"
   },
   "chromium-ipad-portrait": {
-    backgroundColor: "#2B5F47",
+    backgroundColor: "#fff",
     borderRadius: "800px",
-    color: "#fff",
+    // color: "#fff",
+    color: "#2B5F47",
+    borderColor : '#2B5F47',
     height: "44px",
     fontSize: "16px",
     fontWeight: "500",
     padding : "12px 24px"
   },
   MobileChrome: {
-    backgroundColor: "#2B5F47",
+    backgroundColor: "#fff",
     borderRadius: "800px",
-    color: "#fff",
+    // color: "#fff",
+    color: "#2B5F47",
+    borderColor : '#2B5F47',
     height: "24px",
     fontSize: "13px",
     fontWeight: "500",
@@ -389,22 +411,126 @@ export const borButtonStyles = {
 }
 
 
-
+//empty field
 export const textInputFormControlStyles = {
   chromium: {
-    backgroundColor: "rgb(255, 255, 255)",
+    backgroundColor: "#fff",
     borderRadius: "6px",
+    height:"56px" ,
+    fontSize : "16px",
+    fontWeight: "400",
+    fontColor : "#C7C7C7",
+    border :"0.5px solid #C4AF89"  
   },
   "chromium-ipad-landscape": {
-    backgroundColor: "rgb(255, 255, 255)",
+    backgroundColor: "#fff",
     borderRadius: "6px",
+    height:"56px" ,
+    fontSize : "16px",
+    fontColor : "#C7C7C7",
+    fontWeight: "400",
+    border :"0.5px solid #C4AF89"
   },
   "chromium-ipad-portrait": {
-    backgroundColor: "rgb(255, 255, 255)",
+    backgroundColor: "#fff",
     borderRadius: "6px",
+    height:"56px" ,
+    fontSize : "16px",
+    fontColor : "#C7C7C7",
+    fontWeight: "400",
+    border :"0.5px solid #C4AF89"
   },
   MobileChrome: {
-    backgroundColor: "rgb(255, 255, 255)",
+    backgroundColor: "#fff",
     borderRadius: "6px",
+    height:"36px" ,
+    fontSize : "14px",
+    fontColor : "#C7C7C7",
+    fontWeight: "400",
+    border :"0.5px solid #C4AF89"
   },
 };
+
+//for filled  field
+export const textInputForFilledControlStyles = {
+  chromium: {
+    backgroundColor: "#EAEFED",
+    borderRadius: "6px",
+    height:"56px" ,
+    fontSize : "16px",
+    fontColor : "#433C3C",
+    fontWeight: "400",
+    border :"0.5px solid #2B5F47"  
+    
+  },
+  "chromium-ipad-landscape": {
+    backgroundColor: "#EAEFED",
+    borderRadius: "6px",
+    height:"56px" ,
+    fontSize : "16px",
+    fontColor : "#433C3C",
+    fontWeight: "400",
+    border :"0.5px solid #2B5F47"
+  },
+  "chromium-ipad-portrait": {
+    backgroundColor: "#EAEFED",
+    borderRadius: "6px",
+    height:"56px" ,
+    fontSize : "16px",
+    fontColor : "#433C3C",
+    fontWeight: "400",
+    border :"0.5px solid #2B5F47"
+  },
+  MobileChrome: {
+    backgroundColor: "#EAEFED",
+    borderRadius: "6px",
+    height:"36px" ,
+    fontSize : "14px",
+    fontColor : "#433C3C",
+    fontWeight: "400",
+    border :"0.5px solid #2B5F47"
+  },
+};
+
+//for error field
+
+export const ForErrorFieldControlStyles = {
+  chromium: {
+    backgroundColor: "#FEEEEE",
+    borderRadius: "6px",
+    height:"56px" ,
+    fontSize : "16px",
+    fontColor : "#433C3C",
+    fontWeight: "400",
+    border :"0.5px solid #F58989"  
+    
+  },
+  "chromium-ipad-landscape": {
+    backgroundColor: "#FEEEEE",
+    borderRadius: "6px",
+    height:"56px" ,
+    fontSize : "16px",
+    fontColor : "#433C3C",
+    fontWeight: "400",
+    border :"0.5px solid #F58989"
+  },
+  "chromium-ipad-portrait": {
+    backgroundColor: "#FEEEEE",
+    borderRadius: "6px",
+    height:"56px" ,
+    fontSize : "16px",
+    fontColor : "#433C3C",
+    fontWeight: "400",
+    border :"0.5px solid #F58989"
+  },
+  MobileChrome: {
+    backgroundColor: "#FEEEEE",
+    borderRadius: "6px",
+    height:"36px" ,
+    fontSize : "14px",
+    fontColor : "#433C3C",
+    fontWeight: "400",
+    border :"0.5px solid #F58989"
+  },
+};
+

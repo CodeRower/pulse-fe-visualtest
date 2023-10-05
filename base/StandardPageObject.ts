@@ -19,38 +19,32 @@ export class StandardPageObject {
   }
 
   async executeStandardTests() {
-    await this.validateTextFormFieldsControls();
-    await this.validatePrimaryButtons();
+    await this.validateStandardControls("input[type='text'].form-control", textInputFormControlStyles[this.deviceName] ,"TextFormFieldsControls", "Style Validation");
+    await this.validateStandardControls(".btn-success", primaryButtonStyles[this.deviceName] ,"PrimaryButtons", "Style Validation");
   }
 
-  private async validateTextFormFieldsControls() {
-    const deviceSpecificStyles = textInputFormControlStyles[this.deviceName];
-    const textInputFormControl = await this.page.locator(
-      "input[type='text'].form-control"
+  private async validateStandardControls(selector, styleMapping, controlTitle, controlDescription ) {
+    const deviceSpecificStyles = styleMapping;
+    const controlUnderValidation = await this.page.locator(
+      selector
     );
-    const count = await textInputFormControl.count();
+    const count = await controlUnderValidation.count();
     // console.log(`validateTextFormFieldsControls FOUND: ${count}`);
     test
       .info()
       .annotations.push({
-        type: `FOUND: ${count} TextFormFieldsControls`,
-        description: "validateTextFormFieldsControls",
+        type: `FOUND: ${count} ${controlTitle}`,
+        description: `${controlDescription}`,
       });
 
-    if (textInputFormControl && count > 0) {
+    if (controlUnderValidation && count > 0) {
       for (let i = 0; i < count; ++i) {
-        const nameOfElement = await textInputFormControl
+        const nameOfElement = await controlUnderValidation
           .nth(i)
           .getAttribute("name");
         console.log(`VALIDATING: ${nameOfElement}`);
-        // test
-        //   .info()
-        //   .annotations.push({
-        //     type: `VALIDATING: ${nameOfElement}`,
-        //     description: "validateTextFormFieldsControls",
-        //   });
 
-        const computedStyle = await textInputFormControl
+        const computedStyle = await controlUnderValidation
           .nth(i)
           .evaluate((element) => window.getComputedStyle(element));
 
@@ -59,46 +53,6 @@ export class StandardPageObject {
           await expect(computedStyle[style]).toBe(
             deviceSpecificStyles[style]
           );
-        }
-      }
-    }
-  }
-
-  private async validatePrimaryButtons() {
-    const deviceSpecificStyles = primaryButtonStyles[this.deviceName];
-    
-    const primaryButtons = await this.page.locator(".btn-success");
-
-    const count = await primaryButtons.count();
-    // console.log(`validatePrimaryButtons FOUND: ${count}`);
-    test
-      .info()
-      .annotations.push({
-        type: `FOUND: ${count} PrimaryButtons`,
-        description: "validatePrimaryButtons",
-      });
-
-    if (primaryButtons && count > 0) {
-      for (let i = 0; i < count; ++i) {
-        const nameOfElement = await primaryButtons.nth(i).textContent();
-        console.log(`VALIDATING: ${nameOfElement}`);
-        // test
-        //   .info()
-        //   .annotations.push({
-        //     type: `VALIDATING: ${nameOfElement}`,
-        //     description: "validatePrimaryButtons",
-        //   });
-
-        const computedStyle = await primaryButtons
-          .nth(i)
-          .evaluate((element) => window.getComputedStyle(element));
-
-        for (let pBtnStyle in deviceSpecificStyles) {
-          // console.log(`${pBtnStyle} : ${computedStyle[pBtnStyle]}`);
-          await expect(computedStyle[pBtnStyle]).toBe(
-            deviceSpecificStyles[pBtnStyle]
-          );
-          // await expect(btn).toHaveCSS(pBtnStyle, primaryButtonStyles[pBtnStyle]);
         }
       }
     }

@@ -1,18 +1,36 @@
 export const primaryButtonStyles = {
   chromium: {
-    backgroundColor: "rgb(43, 95, 71)",
+    backgroundColor: "rgb(199, 199, 199)",
     borderRadius: "800px",
   },
   "chromium-ipad-landscape": {
-    backgroundColor: "rgb(43, 95, 71)",
+    backgroundColor: "rgb(199, 199, 199)",
     borderRadius: "800px",
   },
   "chromium-ipad-portrait": {
-    backgroundColor: "rgb(43, 95, 71)",
+    backgroundColor: "rgb(199, 199, 199)",
     borderRadius: "800px",
   },
   MobileChrome: {
-    backgroundColor: "rgb(43, 95, 71)",
+    backgroundColor: "rgb(199, 199, 199)",
+    borderRadius: "800px",
+  },
+};
+export const lightButtonStyles = {
+  chromium: {
+    backgroundColor: "rgb(248, 249, 250)",
+    borderRadius: "800px",
+  },
+  "chromium-ipad-landscape": {
+    backgroundColor: "rgb(248, 249, 250)",
+    borderRadius: "800px",
+  },
+  "chromium-ipad-portrait": {
+    backgroundColor: "rgb(248, 249, 250)",
+    borderRadius: "800px",
+  },
+  MobileChrome: {
+    backgroundColor: "rgb(248, 249, 250)",
     borderRadius: "800px",
   },
 };

@@ -3,6 +3,7 @@
 
 import { test, expect, type Locator, type Page, WorkerInfo } from "@playwright/test";
 import {
+  lightButtonStyles,
   primaryButtonStyles,
   textInputFormControlStyles,
 } from "../utilities/stylesConstants";
@@ -20,7 +21,9 @@ export class StandardPageObject {
 
   async executeStandardTests() {
     await this.validateStandardControls("input[type='text'].form-control", textInputFormControlStyles[this.deviceName] ,"TextFormFieldsControls", "Style Validation");
-    await this.validateStandardControls(".btn-success", primaryButtonStyles[this.deviceName] ,"PrimaryButtons", "Style Validation");
+    await this.validateStandardControls(".btn-primary ", primaryButtonStyles[this.deviceName] ,"PrimaryButtons", "Style Validation");
+    await this.validateStandardControls(".bg-light ", lightButtonStyles[this.deviceName] ,"LightButtons", "Style Validation");
+
   }
 
   private async validateStandardControls(selector, styleMapping, controlTitle, controlDescription ) {

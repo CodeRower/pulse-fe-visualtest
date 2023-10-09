@@ -13,7 +13,7 @@ test("Signin Page", async ({ page }) => {
 test("User Account Locked", async ({ page }) => {
   await page.goto("https://pulse-frontend.web.app/auth/signin");
   await page.getByPlaceholder("Email").click();
-  await page.getByPlaceholder("Email").fill("sai.surya225@gmail.com");
+  await page.getByPlaceholder("Email").fill("lockedUser@mail.com");
   await page.getByPlaceholder("Password").click();
   await page.getByPlaceholder("Password").fill("invalid");
   await page.getByRole("button", { name: " Log in with email" }).click();

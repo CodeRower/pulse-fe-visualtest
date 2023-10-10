@@ -12,6 +12,8 @@ test("Signup Page", async ({ page }) => {
 test("Validate Standard Tests", async ({ page }, workerInfo) => {
   const standardPage = new StandardPageObject(page, workerInfo);
   await page.goto(pageUrl);
+  await page.getByPlaceholder("Email").click();
+  await page.getByPlaceholder("Email").fill("lockedUser@mail.com");
   await standardPage.executeStandardTests();
 });
 

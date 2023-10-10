@@ -23,6 +23,7 @@ export class StandardPageObject {
     await this.validateStandardControls("input[type='text'].form-control", textInputFormControlStyles[this.deviceName] ,"TextFormFieldsControls", "Style Validation");
     await this.validateStandardControls(".btn-primary ", primaryButtonStyles[this.deviceName] ,"PrimaryButtons", "Style Validation");
     await this.validateStandardControls(".bg-light ", lightButtonStyles[this.deviceName] ,"LightButtons", "Style Validation");
+    await this.validateStandardControls(".btnFilled ", lightButtonStyles[this.deviceName] ,"LightButtons", "Style Validation");
 
   }
 

@@ -9,7 +9,7 @@ test("Signin Page", async ({ page }) => {
   // Expect a title "to contain" a substring.
   await expect(page).toHaveScreenshot({ fullPage: true });
 });
-
+    
 test("User Account Locked", async ({ page }) => {
   await page.goto("https://pulse-frontend.web.app/auth/signin");
   await page.getByPlaceholder("Email").click();

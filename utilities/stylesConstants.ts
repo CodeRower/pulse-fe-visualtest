@@ -113,7 +113,6 @@ export const borderButtonStyles = {
   "chromium-ipad-landscape": {
     backgroundColor: "#fff",
     borderRadius: "800px",
-    // color: "#fff",
     color: "#2B5F47",
     borderColor : '#2B5F47',
     height: "64px",
@@ -124,7 +123,6 @@ export const borderButtonStyles = {
   "chromium-ipad-portrait": {
     backgroundColor: "#fff",
     borderRadius: "800px",
-    // color: "#fff",
     color: "#2B5F47",
     borderColor : '#2B5F47',
     height: "64px",
@@ -135,7 +133,6 @@ export const borderButtonStyles = {
   MobileChrome: {
     backgroundColor: "#fff",
     borderRadius: "800px",
-    // color: "#fff",
     color: "#2B5F47",
     borderColor : '#2B5F47',
     height: "36px",
@@ -147,7 +144,7 @@ export const borderButtonStyles = {
 };
 
 //for medium button
-export const mediumButtonStyles = {
+export const mediumPrimaryButtonStyles = {
   chromium: {
     backgroundColor: "#2B5F47",
     borderRadius: "800px",
@@ -189,7 +186,7 @@ export const mediumButtonStyles = {
 }
 
 //light color
-export const lighButtonStyles = {
+export const mediumLightButtonStyles = {
   chromium: {
     backgroundColor: "#EAEFED",
     borderRadius: "800px",
@@ -202,7 +199,6 @@ export const lighButtonStyles = {
   "chromium-ipad-landscape": {
     backgroundColor: "#EAEFED",
     borderRadius: "800px",
-    // color: "#fff",
     color: "#2B5F47",
     height: "56px",
     fontSize: "16px",
@@ -212,7 +208,6 @@ export const lighButtonStyles = {
   "chromium-ipad-portrait": {
     backgroundColor: "#EAEFED",
     borderRadius: "800px",
-    // color: "#fff",
     color: "#2B5F47",
     height: "56px",
     fontSize: "16px",
@@ -223,7 +218,6 @@ export const lighButtonStyles = {
   MobileChrome: {
     backgroundColor: "#EAEFED",
     borderRadius: "800px",
-    // color: "#fff",
     color: "#2B5F47",
     height: "32px",
     fontSize: "14px",
@@ -235,11 +229,10 @@ export const lighButtonStyles = {
 
 //border color
 
-export const bordButtonStyles = {
+export const mediumBorderButtonStyles = {
   chromium: {
     backgroundColor: "#fff",
     borderRadius: "800px",
-    // color: "#fff",
     color: "#2B5F47",
     borderColor : '#2B5F47',
     height: "56px",
@@ -259,7 +252,6 @@ export const bordButtonStyles = {
   "chromium-ipad-portrait": {
     backgroundColor: "#fff",
     borderRadius: "800px",
-    // color: "#fff",
     color: "#2B5F47",
     borderColor : '#2B5F47',
     height: "56px",
@@ -270,7 +262,6 @@ export const bordButtonStyles = {
   MobileChrome: {
     backgroundColor: "#fff",
     borderRadius: "800px",
-    // color: "#fff",
     color: "#2B5F47",
     borderColor : '#2B5F47',
     height: "32px",
@@ -282,7 +273,7 @@ export const bordButtonStyles = {
 }
 
 //for small button
-export const smallButtonStyles = {
+export const smallPrimaryButtonStyles = {
   chromium: {
     backgroundColor: "#2B5F47",
     borderRadius: "800px",
@@ -323,7 +314,7 @@ export const smallButtonStyles = {
 }
 
 //light button
-export const LigButtonStyles = {
+export const smallLightButtonStyles = {
   chromium: {
     backgroundColor: "#EAEFED",
     borderRadius: "800px",
@@ -364,7 +355,7 @@ export const LigButtonStyles = {
 }
 
 //border color
-export const borButtonStyles = {
+export const smallBorderButtonStyles = {
   chromium: {
     backgroundColor: "#fff",
     borderRadius: "800px",
@@ -461,7 +452,7 @@ export const textInputForFilledControlStyles = {
     fontColor : "#433C3C",
     fontWeight: "400",
     border :"0.5px solid #2B5F47"  
-    
+     
   },
   "chromium-ipad-landscape": {
     backgroundColor: "#EAEFED",

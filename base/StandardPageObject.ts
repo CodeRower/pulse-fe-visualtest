@@ -1,9 +1,18 @@
+import { lightButtonStyles } from './../utilities/stylesConstants';
 // https://playwright.dev/docs/pom
 // https://playwright.dev/docs/locators
 
 import { test, expect, type Locator, type Page, WorkerInfo } from "@playwright/test";
 import {
   primaryButtonStyles,
+  lightButtonStyles,
+  borderButtonStyles ,
+  mediumPrimaryButtonStyles,
+  mediumLightButtonStyles,
+  mediumBorderButtonStyles,
+  smallPrimaryButtonStyles,
+  smallLightButtonStyles,
+  smallBorderButtonStyles ,
   textInputFormControlStyles,
 } from "../utilities/stylesConstants";
 
@@ -20,8 +29,16 @@ export class StandardPageObject {
 
   async executeStandardTests() {
     await this.validateStandardControls("input[type='text'].form-control", textInputFormControlStyles[this.deviceName] ,"TextFormFieldsControls", "Style Validation");
-    await this.validateStandardControls(".btn-success", primaryButtonStyles[this.deviceName] ,"PrimaryButtons", "Style Validation");
-  }
+    await this.validateStandardControls(".btn-primary", primaryButtonStyles[this.deviceName] ,"PrimaryButtons", "Style Validation");
+    await this.validateStandardControls(".bg-light", lightButtonStyles[this.deviceName] ,"lightButtons", "Style Validation");
+    await this.validateStandardControls(".bg-border", borderButtonStyles[this.deviceName] ,"borderButtons", "Style Validation");
+    await this.validateStandardControls(".btn-medium-primary",  mediumPrimaryButtonStyles[this.deviceName] ,"MediumPrimaryButtons", "Style Validation");
+    await this.validateStandardControls(".btn-medium-light",  mediumLightButtonStyles[this.deviceName] ,"MediumLightButtons", "Style Validation");
+    await this.validateStandardControls(".btn-medium-border",  mediumBorderButtonStyles[this.deviceName] ,"MediumBorderButtons", "Style Validation");
+    await this.validateStandardControls(".btn-small-primary",   smallPrimaryButtonStyles[this.deviceName] ,"smallPrimaryButtons", "Style Validation");
+    await this.validateStandardControls(".btn-small-light",   smallLightButtonStyles[this.deviceName] ,"smallLightButtons", "Style Validation");
+    await this.validateStandardControls(".btn-small-border",   smallBorderButtonStyles[this.deviceName] ,"smallBorderButtons", "Style Validation");
+    }
 
   private async validateStandardControls(selector, styleMapping, controlTitle, controlDescription ) {
     const deviceSpecificStyles = styleMapping;

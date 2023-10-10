@@ -40,7 +40,7 @@ export class StandardPageObject {
     await this.validateStandardControls(".btnLight.btn-sml", lightSmallButtonStyles[this.deviceName] ,"Light Small Buttons", "Style Validation");
     await this.validateStandardControls(".btnOutlined.btn-lrg", outLinedLargeButtonStyles[this.deviceName] ,"OutLined Large Buttons", "Style Validation");
     await this.validateStandardControls(".btnOutlined.btn-mdm", outLinedMediumButtonStyles[this.deviceName] ,"OutLined Medium Buttons", "Style Validation");
-    await this.validateStandardControls(".btnOutlined.btn-sml", outLinedSmallButtonStyles[this.deviceName] ,"OutLined Small Buttons", "Style Validation");
+    await this.validateStandardControls(".btnOutlined.btn-sml.rounded-pill", outLinedSmallButtonStyles[this.deviceName] ,"OutLined Small Buttons", "Style Validation");
  
   }
 

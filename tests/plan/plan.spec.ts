@@ -10,11 +10,16 @@ test("Plan Page", async ({ page }) => {
   await page.getByPlaceholder("Password").fill(testUser.password);
   await page.getByRole("button", { name: " Log in with email" }).click();
   await page.goto("https://pulse-frontend.web.app/plan");
-
+  await page.getByLabel("Select option").selectOption("eur");
+  await page.getByLabel("Select option").selectOption("usd");
+  await page.getByLabel("Select option").selectOption("inr");
+  await page.getByRole("button", { name: "Get Started" }).first().click();
+  const price = await page.getByRole("heading", { name: "$119 per Month" });
+  await expect(price.innerText()).toContain("$119 per Month");
+  await page.getByRole("button", { name: "Get Started" }).nth(1).click();
   // Expect a title "to contain" a substring.
   await expect(page).toHaveScreenshot({ fullPage: true });
 });
-
 
 test("Validate Standard Tests", async ({ page }, workerInfo) => {
   const standardPage = new StandardPageObject(page, workerInfo);

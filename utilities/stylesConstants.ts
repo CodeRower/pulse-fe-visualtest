@@ -1,6 +1,25 @@
 export const primaryButtonStyles = {
+  // chromium: {
+  //   backgroundColor: "rgb(43, 95, 71)",
+  //   borderRadius: "800px",
+  // },
+  // "chromium-ipad-landscape": {
+  //   backgroundColor: "rgb(43, 95, 71)",
+  //   borderRadius: "800px",
+  // },
+  // "chromium-ipad-portrait": {
+  //   backgroundColor: "rgb(43, 95, 71)",
+  //   borderRadius: "800px",
+  // },
+  // MobileChrome: {
+  //   backgroundColor: "rgb(43, 95, 71)",
+  //   borderRadius: "800px",
+  //   height : "36px",
+  //   fontSize : "16px" ,
+  // border :"0.5px solid #EAEFED"  },
+
   chromium: {
-    backgroundColor: "rgb(43, 95, 71)",
+    backgroundColor: "#2B5F47",
     borderRadius: "800px",
     color: "rgb(255, 255, 255)",
     height: "64px",
@@ -9,7 +28,7 @@ export const primaryButtonStyles = {
     padding: "20px 64px",
   },
   "chromium-ipad-landscape": {
-    backgroundColor: "rgb(43, 95, 71)",
+    backgroundColor: "#2B5F47",
     borderRadius: "800px",
     color: "rgb(255, 255, 255)",
     height: "64px",
@@ -18,7 +37,7 @@ export const primaryButtonStyles = {
     padding: "20px 64px",
   },
   "chromium-ipad-portrait": {
-    backgroundColor: "rgb(43, 95, 71)",
+    backgroundColor: "#2B5F47",
     borderRadius: "800px",
     color: "rgb(255, 255, 255)",
     height: "64px",
@@ -27,7 +46,7 @@ export const primaryButtonStyles = {
     padding: "20px 64px",
   },
   MobileChrome: {
-    backgroundColor: "rgb(43, 95, 71)",
+    backgroundColor: "#2B5F47",
     borderRadius: "800px",
     color: "#fff",
     height: "36px",
@@ -439,7 +458,7 @@ export const outLinedSmallButtonStyles = {
 //empty field
 export const textInputFormControlStyles = {
   chromium: {
-    backgroundColor: "rgb(255, 255, 255)",
+    backgroundColor: "#EAEFED",
     borderRadius: "6px",
     height: "56px",
     fontSize: "16px",
@@ -448,7 +467,7 @@ export const textInputFormControlStyles = {
     border: "1px solid rgb(196, 175, 137)",
   },
   "chromium-ipad-landscape": {
-    backgroundColor: "rgb(255, 255, 255)",
+    backgroundColor: "#EAEFED",
     borderRadius: "6px",
     height: "56px",
     fontSize: "16px",
@@ -457,7 +476,7 @@ export const textInputFormControlStyles = {
     border: "1px solid rgb(196, 175, 137)",
   },
   "chromium-ipad-portrait": {
-    backgroundColor: "rgb(255, 255, 255)",
+    backgroundColor: "#EAEFED",
     borderRadius: "6px",
     height: "56px",
     fontSize: "16px",
@@ -466,7 +485,7 @@ export const textInputFormControlStyles = {
     border: "1px solid rgb(196, 175, 137)",
   },
   MobileChrome: {
-    backgroundColor: "rgb(255, 255, 255)",
+    backgroundColor: "#EAEFED",
     borderRadius: "6px",
     height: "56px",
     fontSize: "16px",
@@ -556,3 +575,46 @@ export const ForErrorFieldControlStyles = {
     border: "0.5px solid #F58989",
   },
 };
+
+//for error field
+
+export const textInputForErrorFieldControlStyles = {
+  chromium: {
+    backgroundColor: "#FEEEEE",
+    borderRadius: "6px",
+    height:"56px" ,
+    fontSize : "16px",
+    fontColor : "#433C3C",
+    fontWeight: "400",
+    border :"0.5px solid #F58989"  
+    
+  },
+  "chromium-ipad-landscape": {
+    backgroundColor: "#FEEEEE",
+    borderRadius: "6px",
+    height:"56px" ,
+    fontSize : "16px",
+    fontColor : "#433C3C",
+    fontWeight: "400",
+    border :"0.5px solid #F58989"
+  },
+  "chromium-ipad-portrait": {
+    backgroundColor: "#FEEEEE",
+    borderRadius: "6px",
+    height:"56px" ,
+    fontSize : "16px",
+    fontColor : "#433C3C",
+    fontWeight: "400",
+    border :"0.5px solid #F58989"
+  },
+  MobileChrome: {
+    backgroundColor: "#FEEEEE",
+    borderRadius: "6px",
+    height:"36px" ,
+    fontSize : "14px",
+    fontColor : "#433C3C",
+    fontWeight: "400",
+    border :"0.5px solid #F58989"
+  },
+};
+

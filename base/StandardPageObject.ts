@@ -1,11 +1,20 @@
 // https://playwright.dev/docs/pom
 // https://playwright.dev/docs/locators
 
-import { test, expect, type Locator, type Page, WorkerInfo } from "@playwright/test";
+import { WorkerInfo, expect, test, type Page } from "@playwright/test";
 import {
+  filledLargeButtonStyles,
+  filledMediumButtonStyles,
+  filledSmallButtonStyles,
   lightButtonStyles,
+  lightLargeButtonStyles,
+  lightMediumButtonStyles,
+  lightSmallButtonStyles,
+  outLinedLargeButtonStyles,
+  outLinedMediumButtonStyles,
+  outLinedSmallButtonStyles,
   primaryButtonStyles,
-  textInputFormControlStyles,
+  textInputFormControlStyles
 } from "../utilities/stylesConstants";
 
 export class StandardPageObject {
@@ -22,9 +31,17 @@ export class StandardPageObject {
   async executeStandardTests() {
     await this.validateStandardControls("input[type='text'].form-control", textInputFormControlStyles[this.deviceName] ,"TextFormFieldsControls", "Style Validation");
     await this.validateStandardControls(".btn-primary ", primaryButtonStyles[this.deviceName] ,"PrimaryButtons", "Style Validation");
-    await this.validateStandardControls(".bg-light ", lightButtonStyles[this.deviceName] ,"LightButtons", "Style Validation");
-    await this.validateStandardControls(".btnFilled ", lightButtonStyles[this.deviceName] ,"LightButtons", "Style Validation");
-
+    await this.validateStandardControls(".bg-light", lightButtonStyles[this.deviceName] ,"LightButtons", "Style Validation");
+    await this.validateStandardControls(".btnFilled.btn-lrg", filledLargeButtonStyles[this.deviceName] ,"Filled Large Buttons", "Style Validation");
+    await this.validateStandardControls(".btnFilled.btn-mdm", filledMediumButtonStyles[this.deviceName] ,"Filled Medium Buttons", "Style Validation");
+    await this.validateStandardControls(".btnFilled.btn-sml", filledSmallButtonStyles[this.deviceName] ,"Filled Small Buttons", "Style Validation");
+    await this.validateStandardControls(".btnLight.btn-lrg", lightLargeButtonStyles[this.deviceName] ,"Light Large Buttons", "Style Validation");
+    await this.validateStandardControls(".btnLight.btn-mdm", lightMediumButtonStyles[this.deviceName] ,"Light Medium Buttons", "Style Validation");
+    await this.validateStandardControls(".btnLight.btn-sml", lightSmallButtonStyles[this.deviceName] ,"Light Small Buttons", "Style Validation");
+    await this.validateStandardControls(".btnOutlined.btn-lrg", outLinedLargeButtonStyles[this.deviceName] ,"OutLined Large Buttons", "Style Validation");
+    await this.validateStandardControls(".btnOutlined.btn-mdm", outLinedMediumButtonStyles[this.deviceName] ,"OutLined Medium Buttons", "Style Validation");
+    await this.validateStandardControls(".btnOutlined.btn-sml.rounded-pill", outLinedSmallButtonStyles[this.deviceName] ,"OutLined Small Buttons", "Style Validation");
+ 
   }
 
   private async validateStandardControls(selector, styleMapping, controlTitle, controlDescription ) {

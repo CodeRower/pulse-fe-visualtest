@@ -442,7 +442,7 @@ export const textInputFormControlStyles = {
   },
 };
 
-//for filled  field
+//for filled  field 
 export const textInputForFilledControlStyles = {
   chromium: {
     backgroundColor: "#EAEFED",
@@ -485,7 +485,7 @@ export const textInputForFilledControlStyles = {
 
 //for error field
 
-export const ForErrorFieldControlStyles = {
+export const textInputForErrorFieldControlStyles = {
   chromium: {
     backgroundColor: "#FEEEEE",
     borderRadius: "6px",

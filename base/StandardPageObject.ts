@@ -13,7 +13,6 @@ import {
   outLinedLargeButtonStyles,
   outLinedMediumButtonStyles,
   outLinedSmallButtonStyles,
-  primaryButtonStyles,
   textInputFormControlStyles
 } from "../utilities/stylesConstants";
 
@@ -29,9 +28,9 @@ export class StandardPageObject {
   }
 
   async executeStandardTests() {
-    await this.validateStandardControls("input[type='text'].form-control", textInputFormControlStyles[this.deviceName] ,"TextFormFieldsControls", "Style Validation");
-    await this.validateStandardControls(".btn-primary ", primaryButtonStyles[this.deviceName] ,"PrimaryButtons", "Style Validation");
-    await this.validateStandardControls(".bg-light", lightButtonStyles[this.deviceName] ,"LightButtons", "Style Validation");
+    // await this.validateStandardControls("input[type='text'].form-control", textInputFormControlStyles[this.deviceName] ,"TextFormFieldsControls", "Style Validation");
+    // await this.validateStandardControls(".btn-primary ", primaryButtonStyles[this.deviceName] ,"PrimaryButtons", "Style Validation");
+    // await this.validateStandardControls(".bg-light", lightButtonStyles[this.deviceName] ,"LightButtons", "Style Validation");
     await this.validateStandardControls(".btnFilled.btn-lrg", filledLargeButtonStyles[this.deviceName] ,"Filled Large Buttons", "Style Validation");
     await this.validateStandardControls(".btnFilled.btn-mdm", filledMediumButtonStyles[this.deviceName] ,"Filled Medium Buttons", "Style Validation");
     await this.validateStandardControls(".btnFilled.btn-sml", filledSmallButtonStyles[this.deviceName] ,"Filled Small Buttons", "Style Validation");

@@ -11,7 +11,7 @@ setup('user authenticate', async ({ page }) => {
 
   await page.getByPlaceholder("Email").fill(testUser.email);
   await page.getByPlaceholder("Password").fill(testUser.password);
-  await page.getByRole("button", { name: " Log in with E-mail" }).click();
+  await page.getByRole("button", { name: " Log in with email" }).click();
   await page.waitForURL('https://pulse-frontend.web.app/');
 
   // End of authentication steps.
@@ -24,7 +24,7 @@ setup('trainer authenticate', async ({ page }) => {
 
   await page.getByPlaceholder("Email").fill(trainerUser.email);
   await page.getByPlaceholder("Password").fill(trainerUser.password);
-  await page.getByRole("button", { name: " Log in with E-mail" }).click();
+  await page.getByRole("button", { name: " Log in with email" }).click();
   await page.waitForURL('https://pulse-frontend.web.app/');
 
   // End of authentication steps.

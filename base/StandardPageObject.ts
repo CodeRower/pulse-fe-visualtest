@@ -1,10 +1,20 @@
+// import { lightButtonStyles } from './../utilities/stylesConstants';
 // https://playwright.dev/docs/pom
 // https://playwright.dev/docs/locators
 
-import { test, expect, type Locator, type Page, WorkerInfo } from "@playwright/test";
+import { WorkerInfo, expect, test, type Page } from "@playwright/test";
 import {
-  primaryButtonStyles,
-  textInputFormControlStyles,
+  filledLargeButtonStyles,
+  filledMediumButtonStyles,
+  filledSmallButtonStyles,
+  lightButtonStyles,
+  lightLargeButtonStyles,
+  lightMediumButtonStyles,
+  lightSmallButtonStyles,
+  outLinedLargeButtonStyles,
+  outLinedMediumButtonStyles,
+  outLinedSmallButtonStyles,
+  textInputFormControlStyles
 } from "../utilities/stylesConstants";
 
 export class StandardPageObject {
@@ -19,38 +29,43 @@ export class StandardPageObject {
   }
 
   async executeStandardTests() {
-    await this.validateTextFormFieldsControls();
-    await this.validatePrimaryButtons();
+    // await this.validateStandardControls("input[type='text'].form-control", textInputFormControlStyles[this.deviceName] ,"TextFormFieldsControls", "Style Validation");
+    // await this.validateStandardControls(".btn-primary ", primaryButtonStyles[this.deviceName] ,"PrimaryButtons", "Style Validation");
+    // await this.validateStandardControls(".bg-light", lightButtonStyles[this.deviceName] ,"LightButtons", "Style Validation");
+    await this.validateStandardControls(".btnFilled.btn-lrg", filledLargeButtonStyles[this.deviceName] ,"Filled Large Buttons", "Style Validation");
+    await this.validateStandardControls(".btnFilled.btn-mdm", filledMediumButtonStyles[this.deviceName] ,"Filled Medium Buttons", "Style Validation");
+    await this.validateStandardControls(".btnFilled.btn-sml", filledSmallButtonStyles[this.deviceName] ,"Filled Small Buttons", "Style Validation");
+    await this.validateStandardControls(".btnLight.btn-lrg", lightLargeButtonStyles[this.deviceName] ,"Light Large Buttons", "Style Validation");
+    await this.validateStandardControls(".btnLight.btn-mdm", lightMediumButtonStyles[this.deviceName] ,"Light Medium Buttons", "Style Validation");
+    await this.validateStandardControls(".btnLight.btn-sml", lightSmallButtonStyles[this.deviceName] ,"Light Small Buttons", "Style Validation");
+    await this.validateStandardControls(".btnOutlined.btn-lrg", outLinedLargeButtonStyles[this.deviceName] ,"OutLined Large Buttons", "Style Validation");
+    await this.validateStandardControls(".btnOutlined.btn-mdm", outLinedMediumButtonStyles[this.deviceName] ,"OutLined Medium Buttons", "Style Validation");
+    await this.validateStandardControls(".btnOutlined.btn-sml.rounded-pill", outLinedSmallButtonStyles[this.deviceName] ,"OutLined Small Buttons", "Style Validation");
+ 
   }
 
-  private async validateTextFormFieldsControls() {
-    const deviceSpecificStyles = textInputFormControlStyles[this.deviceName];
-    const textInputFormControl = await this.page.locator(
-      "input[type='text'].form-control"
+  private async validateStandardControls(selector, styleMapping, controlTitle, controlDescription ) {
+    const deviceSpecificStyles = styleMapping;
+    const controlUnderValidation = await this.page.locator(
+      selector
     );
-    const count = await textInputFormControl.count();
+    const count = await controlUnderValidation.count();
     // console.log(`validateTextFormFieldsControls FOUND: ${count}`);
     test
       .info()
       .annotations.push({
-        type: `FOUND: ${count} TextFormFieldsControls`,
-        description: "validateTextFormFieldsControls",
+        type: `FOUND: ${count} ${controlTitle}`,
+        description: `${controlDescription}`,
       });
 
-    if (textInputFormControl && count > 0) {
+    if (controlUnderValidation && count > 0) {
       for (let i = 0; i < count; ++i) {
-        const nameOfElement = await textInputFormControl
+        const nameOfElement = await controlUnderValidation
           .nth(i)
           .getAttribute("name");
         console.log(`VALIDATING: ${nameOfElement}`);
-        // test
-        //   .info()
-        //   .annotations.push({
-        //     type: `VALIDATING: ${nameOfElement}`,
-        //     description: "validateTextFormFieldsControls",
-        //   });
 
-        const computedStyle = await textInputFormControl
+        const computedStyle = await controlUnderValidation
           .nth(i)
           .evaluate((element) => window.getComputedStyle(element));
 
@@ -59,46 +74,6 @@ export class StandardPageObject {
           await expect(computedStyle[style]).toBe(
             deviceSpecificStyles[style]
           );
-        }
-      }
-    }
-  }
-
-  private async validatePrimaryButtons() {
-    const deviceSpecificStyles = primaryButtonStyles[this.deviceName];
-    
-    const primaryButtons = await this.page.locator(".btn-success");
-
-    const count = await primaryButtons.count();
-    // console.log(`validatePrimaryButtons FOUND: ${count}`);
-    test
-      .info()
-      .annotations.push({
-        type: `FOUND: ${count} PrimaryButtons`,
-        description: "validatePrimaryButtons",
-      });
-
-    if (primaryButtons && count > 0) {
-      for (let i = 0; i < count; ++i) {
-        const nameOfElement = await primaryButtons.nth(i).textContent();
-        console.log(`VALIDATING: ${nameOfElement}`);
-        // test
-        //   .info()
-        //   .annotations.push({
-        //     type: `VALIDATING: ${nameOfElement}`,
-        //     description: "validatePrimaryButtons",
-        //   });
-
-        const computedStyle = await primaryButtons
-          .nth(i)
-          .evaluate((element) => window.getComputedStyle(element));
-
-        for (let pBtnStyle in deviceSpecificStyles) {
-          // console.log(`${pBtnStyle} : ${computedStyle[pBtnStyle]}`);
-          await expect(computedStyle[pBtnStyle]).toBe(
-            deviceSpecificStyles[pBtnStyle]
-          );
-          // await expect(btn).toHaveCSS(pBtnStyle, primaryButtonStyles[pBtnStyle]);
         }
       }
     }

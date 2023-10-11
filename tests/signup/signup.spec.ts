@@ -12,6 +12,8 @@ test("Signup Page", async ({ page }) => {
 test("Validate Standard Tests", async ({ page }, workerInfo) => {
   const standardPage = new StandardPageObject(page, workerInfo);
   await page.goto(pageUrl);
+  await page.getByPlaceholder("Email").click();
+  await page.getByPlaceholder("Email").fill("lockedUser@mail.com");
   await standardPage.executeStandardTests();
 });
 
@@ -26,7 +28,25 @@ test("test invalid email", async ({ page }) => {
   await page.getByPlaceholder("Email").fill("test@");
   await page.getByPlaceholder("Password").click();
   await page.getByPlaceholder("Password").fill("123456");
-  await page.getByRole("button", { name: " Sign Up with E-mail" }).click();
+  await page.getByRole("button", { name: " Sign Up with email" }).click();
 
+  await expect(page).toHaveScreenshot({ fullPage: true });
+});
+
+test('test invalid password', async ({ page }) => {
+  await page.goto(pageUrl);
+  // await page.locator('.col-6').click();
+  await page.getByPlaceholder('First Name').click();
+  await page.getByPlaceholder('First Name').fill('Rana');
+  await page.getByPlaceholder('Last Name').click();
+  await page.getByPlaceholder('Last Name').fill('Mahato');
+  await page.getByPlaceholder('Email').click();
+  await page.getByPlaceholder('Email').fill('rana@gmail.com');
+  await page.getByPlaceholder('Password').click();
+  await page.getByPlaceholder('Password').fill('12dew');
+  await page.getByPlaceholder('Email').click();
+  await page.getByPlaceholder('Email').fill('rana@gmail.com');
+  await page.getByRole('button', { name: ' Sign Up with email' }).click();
+  
   await expect(page).toHaveScreenshot({ fullPage: true });
 });

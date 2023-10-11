@@ -15,7 +15,13 @@ import {
   outLinedMediumButtonStyles,
   outLinedSmallButtonStyles,
   primaryButtonStyles,
-  textInputFormControlStyles
+  textInputFormControlStyles,
+  headingH1Styles,
+  headingH2Styles,
+  headingH3Styles,
+  headingH4Styles,
+  paragraphPStyles,
+  headingH6Styles,
 } from "../utilities/stylesConstants";
 
 export class StandardPageObject {
@@ -42,8 +48,18 @@ export class StandardPageObject {
     await this.validateStandardControls(".btnOutlined.btn-lrg", outLinedLargeButtonStyles[this.deviceName] ,"OutLined Large Buttons", "Style Validation");
     await this.validateStandardControls(".btnOutlined.btn-mdm", outLinedMediumButtonStyles[this.deviceName] ,"OutLined Medium Buttons", "Style Validation");
     await this.validateStandardControls(".btnOutlined.btn-sml.rounded-pill", outLinedSmallButtonStyles[this.deviceName] ,"OutLined Small Buttons", "Style Validation");
- 
-  }
+    await this.validateStandardControls("h1", headingH1Styles[this.deviceName] ,"Heading H1", "Style Validation");
+    await this.validateStandardControls("h2",headingH2Styles[this.deviceName] ,"Heading H2", "Style Validation");
+    await this.validateStandardControls("h3",headingH3Styles[this.deviceName] ,"Heading H3", "Style Validation");
+    await this.validateStandardControls("h4",headingH4Styles[this.deviceName] ,"Heading H4", "Style Validation");
+    await this.validateStandardControls("p",paragraphPStyles[this.deviceName] ,"Paragraph P", "Style Validation");
+    await this.validateStandardControls("h6",headingH6Styles[this.deviceName] ,"Heading H6", "Style Validation");
+    
+}
+
+
+  
+
 
   private async validateStandardControls(selector, styleMapping, controlTitle, controlDescription ) {
     const deviceSpecificStyles = styleMapping;
@@ -80,3 +96,6 @@ export class StandardPageObject {
     }
   }
 }
+
+
+

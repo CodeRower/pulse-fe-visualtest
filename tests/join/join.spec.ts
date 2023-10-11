@@ -13,6 +13,6 @@ test("Join Page", async ({ page }) => {
 
 test("Validate Standard Tests", async ({ page }, workerInfo) => {
   const standardPage = new StandardPageObject(page, workerInfo);
-  await page.goto("https://pulse-frontend.web.app/join");
+  await page.goto("https://pulse-frontend.web.app/join"); 
   await standardPage.executeStandardTests();
 });

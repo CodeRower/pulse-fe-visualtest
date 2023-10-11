@@ -620,119 +620,172 @@ export const textInputForErrorFieldControlStyles = {
 
 //-----Heading and paragraph style
 export const headingH1Styles={
-  chromium: {
-    fontSize : "32px",
-    fontWeight: "600",
-    lineHeight: "1.5"
-  },
-  "chromium-ipad-landscape": {
-    fontSize : "24px",
-    fontWeight: "600",
-    lineHeight: "1.5"
-  },
-  "chromium-ipad-portrait": {
-    fontSize : "24px",
-    fontWeight: "600",
-    lineHeight: "1.5"
-  },
-  MobileChrome: {
-    fontSize : "20px",
-    fontWeight: "600",
-    lineHeight: "1.5"
-  },
-}
+  // chromium: {
+  //   fontSize : "32px",
+  //   fontWeight: "600",
+  //   lineHeight: "48px"
+  // },
+  // "chromium-ipad-landscape": {
+  //   fontSize : "24px",
+  //   fontWeight: "600",
+  //   lineHeight: "36px"
+  // },
+  // "chromium-ipad-portrait": {
+  //   fontSize : "24px",
+  //   fontWeight: "600",
+  //   lineHeight: "36px"
+  // },
+  // MobileChrome: {
+  //   fontSize : "20px",
+  //   fontWeight: "600",
+  //   lineHeight: "30px"
+  // },
+
+
+    chromium: {
+  
+      fontSize: "32px",
+  
+      fontWeight: "600",
+  
+      lineHeight: `${1.5 * 32}px`,
+  
+    },
+  
+    "chromium-ipad-landscape": {
+  
+      fontSize: "24px",
+  
+      fontWeight: "600",
+  
+      lineHeight: `${1.5 * 24}px`,
+  
+    },
+  
+    "chromium-ipad-portrait": {
+  
+      fontSize: "32px",
+  
+      fontWeight: "600",
+  
+      lineHeight: `${1.5 * 32}px`,
+  
+    },
+  
+    MobileChrome: {
+  
+      fontSize: "20px",
+  
+      fontWeight: "600",
+  
+      lineHeight: `${1.5 * 20}px`,
+  
+    },
+  
+  };
+
 
 export const headingH2Styles={
   chromium: {
-    fontSize : "24px",
-    fontWeight: "500",
-    lineHeight: "1.5"
+    fontSize: "24px",
+    fontWeight: "600",
+    lineHeight: `${1.5 * 24}px`,
+
   },
+
   "chromium-ipad-landscape": {
-    fontSize : "20px",
-    fontWeight: "500",
-    lineHeight: "1.5"
+    fontSize: "20px",
+    fontWeight: "600",
+    lineHeight: `${1.5 * 20}px`,
+
   },
+
   "chromium-ipad-portrait": {
-    fontSize : "20px",
-    fontWeight: "500",
-    lineHeight: "1.5"
+    fontSize: "24px",
+    fontWeight: "600",
+    lineHeight: `${1.5 * 24}px`,
+
   },
+
   MobileChrome: {
-    fontSize : "18px",
-    fontWeight: "500",
-    lineHeight: "1.5"
+    fontSize: "18px",
+    fontWeight: "600",
+    lineHeight: `${1.5 * 18}px`,
+
   },
+
 }
+
 
 export const headingH3Styles={
   chromium: {
     fontSize : "20px",
-    fontWeight: "400",
-    lineHeight: "1.5"
+    fontWeight: "500",
+    lineHeight: `${1.5 * 20}px`
   },
   "chromium-ipad-landscape": {
     fontSize : "18px",
-    fontWeight: "400",
-    lineHeight: "1.5"
+    fontWeight: "500",
+    lineHeight: `${1.5 * 18}px`
   },
   "chromium-ipad-portrait": {
-    fontSize : "18px",
-    fontWeight: "400",
-    lineHeight: "1.5"
+    fontSize : "20px",
+    fontWeight: "500",
+    lineHeight: `${1.5 * 20}px`
   },
   MobileChrome: {
     fontSize : "16px",
-    fontWeight: "400",
-    lineHeight: "1.5"
+    fontWeight: "500",
+    lineHeight: `${1.5 * 16}px`
   },
 }
+
 
 
 
 export const headingH4Styles={
   chromium: {
     fontSize : "18px",
-    fontWeight: "400",
-    lineHeight: "1.5"
+    fontWeight: "500",
+    lineHeight: `${1.5 * 18}px`
   },
   "chromium-ipad-landscape": {
     fontSize : "16px",
-    fontWeight: "400",
-    lineHeight: "1.5"
+    fontWeight: "500",
+    lineHeight: `${1.5 * 16}px`
   },
   "chromium-ipad-portrait": {
-    fontSize : "16px",
-    fontWeight: "400",
-    lineHeight: "1.5"
+    fontSize : "18px",
+    fontWeight: "500",
+    lineHeight: `${1.5 * 18}px`
   },
   MobileChrome: {
-    fontSize : "15px",
-    fontWeight: "400",
-    lineHeight: "1.5"
+    fontSize : "14px",
+    fontWeight: "500",
+    lineHeight: `${1.5 * 14}px`
   },
 }
 
 export const paragraphPStyles={
   chromium: {
     fontSize : "16px",
-    fontWeight: "400",
-    lineHeight: "1.5"
+    fontWeight: "500",
+    lineHeight: `${1.5 * 16}px`
   },
   "chromium-ipad-landscape": {
     fontSize : "14px",
-    fontWeight: "400",
-    lineHeight: "1.5"
+    fontWeight: "500",
+    lineHeight: `${1.5 * 14}px`
   },
   "chromium-ipad-portrait": {
-    fontSize : "14px",
-    fontWeight: "400",
-    lineHeight: "1.5"
+    fontSize : "16px",
+    fontWeight: "500",
+    lineHeight: `${1.5 * 16}px`
   },
   MobileChrome: {
     fontSize : "13px",
-    fontWeight: "400",
-    lineHeight: "1.5"
+    fontWeight: "500",
+    lineHeight: `${1.5 * 13}px`
   },
 }
 
@@ -741,21 +794,21 @@ export const headingH6Styles={
   chromium: {
     fontSize : "14px",
     fontWeight: "400",
-    lineHeight: "1.5"
+    lineHeight: `${1.5 * 14}px`
   },
   "chromium-ipad-landscape": {
     fontSize : "13px",
     fontWeight: "400",
-    lineHeight: "1.5"
+    lineHeight: `${1.5 * 13}px`
   },
   "chromium-ipad-portrait": {
-    fontSize : "13px",
+    fontSize : "14px",
     fontWeight: "400",
-    lineHeight: "1.5"
+    lineHeight: `${1.5 * 14}px`
   },
   MobileChrome: {
     fontSize : "11px",
     fontWeight: "400",
-    lineHeight: "1.5"
+    lineHeight: `${1.5 * 11}px`
   },
 }

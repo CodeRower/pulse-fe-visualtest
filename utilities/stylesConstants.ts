@@ -89,7 +89,7 @@ export const lightButtonStyles = {
     backgroundColor: "rgb(248, 249, 250)",
     borderRadius: "800px",
     color: "rgb(33, 37, 41)",
-      height: "36px",
+    height: "36px",
     fontSize: "16px",
     fontWeight: "600",
     padding: "8px 16px",
@@ -215,7 +215,6 @@ export const filledSmallButtonStyles = {
 };
 //---------Filled Buttons End--------//
 
-
 //---------Light Buttons Start--------//
 export const lightLargeButtonStyles = {
   chromium: {
@@ -339,7 +338,7 @@ export const lightSmallButtonStyles = {
 export const outLinedLargeButtonStyles = {
   chromium: {
     color: "rgb(43, 95, 71)",
-    border:"1px solid rgb(43, 95, 71)",
+    border: "1px solid rgb(43, 95, 71)",
     borderRadius: "800px",
     height: "64px",
     fontSize: "20px",
@@ -348,7 +347,7 @@ export const outLinedLargeButtonStyles = {
   },
   "chromium-ipad-landscape": {
     color: "rgb(43, 95, 71)",
-    border:"1px solid rgb(43, 95, 71)",
+    border: "1px solid rgb(43, 95, 71)",
     borderRadius: "800px",
     height: "64px",
     fontSize: "20px",
@@ -357,7 +356,7 @@ export const outLinedLargeButtonStyles = {
   },
   "chromium-ipad-portrait": {
     color: "rgb(43, 95, 71)",
-    border:"1px solid rgb(43, 95, 71)",
+    border: "1px solid rgb(43, 95, 71)",
     borderRadius: "800px",
     height: "64px",
     fontSize: "20px",
@@ -366,7 +365,7 @@ export const outLinedLargeButtonStyles = {
   },
   MobileChrome: {
     color: "rgb(43, 95, 71)",
-    border:"1px solid rgb(43, 95, 71)",
+    border: "1px solid rgb(43, 95, 71)",
     borderRadius: "800px",
     height: "36px",
     fontSize: "16px",
@@ -379,7 +378,7 @@ export const outLinedMediumButtonStyles = {
   chromium: {
     borderRadius: "800px",
     color: "rgb(43, 95, 71)",
-    border:"1px solid rgb(43, 95, 71)",
+    border: "1px solid rgb(43, 95, 71)",
     height: "56px",
     fontSize: "16px",
     fontWeight: "500",
@@ -388,7 +387,7 @@ export const outLinedMediumButtonStyles = {
   "chromium-ipad-landscape": {
     borderRadius: "800px",
     color: "rgb(43, 95, 71)",
-    border:"1px solid rgb(43, 95, 71)",
+    border: "1px solid rgb(43, 95, 71)",
     height: "56px",
     fontSize: "16px",
     fontWeight: "500",
@@ -397,7 +396,7 @@ export const outLinedMediumButtonStyles = {
   "chromium-ipad-portrait": {
     borderRadius: "800px",
     color: "rgb(43, 95, 71)",
-    border:"1px solid rgb(43, 95, 71)",
+    border: "1px solid rgb(43, 95, 71)",
     height: "56px",
     fontSize: "16px",
     fontWeight: "500",
@@ -406,7 +405,7 @@ export const outLinedMediumButtonStyles = {
   MobileChrome: {
     borderRadius: "800px",
     color: "rgb(43, 95, 71)",
-    border:"1px solid rgb(43, 95, 71)",
+    border: "1px solid rgb(43, 95, 71)",
     height: "32px",
     fontSize: "14px",
     fontWeight: "500",
@@ -418,7 +417,7 @@ export const outLinedSmallButtonStyles = {
   chromium: {
     borderRadius: "800px",
     color: "rgb(43, 95, 71)",
-    border:"1px solid rgb(43, 95, 71)",
+    border: "1px solid rgb(43, 95, 71)",
     height: "44px",
     fontSize: "16px",
     fontWeight: "500",
@@ -427,7 +426,7 @@ export const outLinedSmallButtonStyles = {
   "chromium-ipad-landscape": {
     borderRadius: "800px",
     color: "rgb(43, 95, 71)",
-    border:"1px solid rgb(43, 95, 71)",
+    border: "1px solid rgb(43, 95, 71)",
     height: "44px",
     fontSize: "16px",
     fontWeight: "500",
@@ -436,7 +435,7 @@ export const outLinedSmallButtonStyles = {
   "chromium-ipad-portrait": {
     borderRadius: "800px",
     color: "rgb(43, 95, 71)",
-    border:"1px solid rgb(43, 95, 71)",
+    border: "1px solid rgb(43, 95, 71)",
     height: "44px",
     fontSize: "16px",
     fontWeight: "500",
@@ -445,7 +444,7 @@ export const outLinedSmallButtonStyles = {
   MobileChrome: {
     borderRadius: "800px",
     color: "rgb(43, 95, 71)",
-    border:"1px solid rgb(43, 95, 71)",
+    border: "1px solid rgb(43, 95, 71)",
     height: "24px",
     fontSize: "13px",
     fontWeight: "500",
@@ -454,6 +453,30 @@ export const outLinedSmallButtonStyles = {
 };
 //---------OutLined Buttons End--------//
 
+//----------Heading Styles ---------//
+
+export const headingH1Styles = {
+  chromium: {
+    fontSize: "32px",
+    fontWeight: "600",
+    lineHeight: `${1.5 * 32}px`,
+  },
+  "chromium-ipad-landscape": {
+    fontSize: "24px",
+    fontWeight: "600",
+    lineHeight: `${1.5 * 24}px`,
+  },
+  "chromium-ipad-portrait": {
+    fontSize: "32px",
+    fontWeight: "600",
+    lineHeight: `${1.5 * 32}px`,
+  },
+  MobileChrome: {
+    fontSize: "20px",
+    fontWeight: "600",
+    lineHeight: `${1.5 * 20}px`,
+  },
+};
 
 //empty field
 export const textInputFormControlStyles = {
@@ -582,39 +605,37 @@ export const textInputForErrorFieldControlStyles = {
   chromium: {
     backgroundColor: "#FEEEEE",
     borderRadius: "6px",
-    height:"56px" ,
-    fontSize : "16px",
-    fontColor : "#433C3C",
+    height: "56px",
+    fontSize: "16px",
+    fontColor: "#433C3C",
     fontWeight: "400",
-    border :"0.5px solid #F58989"  
-    
+    border: "0.5px solid #F58989",
   },
   "chromium-ipad-landscape": {
     backgroundColor: "#FEEEEE",
     borderRadius: "6px",
-    height:"56px" ,
-    fontSize : "16px",
-    fontColor : "#433C3C",
+    height: "56px",
+    fontSize: "16px",
+    fontColor: "#433C3C",
     fontWeight: "400",
-    border :"0.5px solid #F58989"
+    border: "0.5px solid #F58989",
   },
   "chromium-ipad-portrait": {
     backgroundColor: "#FEEEEE",
     borderRadius: "6px",
-    height:"56px" ,
-    fontSize : "16px",
-    fontColor : "#433C3C",
+    height: "56px",
+    fontSize: "16px",
+    fontColor: "#433C3C",
     fontWeight: "400",
-    border :"0.5px solid #F58989"
+    border: "0.5px solid #F58989",
   },
   MobileChrome: {
     backgroundColor: "#FEEEEE",
     borderRadius: "6px",
-    height:"36px" ,
-    fontSize : "14px",
-    fontColor : "#433C3C",
+    height: "36px",
+    fontSize: "14px",
+    fontColor: "#433C3C",
     fontWeight: "400",
-    border :"0.5px solid #F58989"
+    border: "0.5px solid #F58989",
   },
 };
-

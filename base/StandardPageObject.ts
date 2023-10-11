@@ -7,6 +7,7 @@ import {
   filledLargeButtonStyles,
   filledMediumButtonStyles,
   filledSmallButtonStyles,
+  headingH1Styles,
   lightButtonStyles,
   lightLargeButtonStyles,
   lightMediumButtonStyles,
@@ -41,7 +42,8 @@ export class StandardPageObject {
     await this.validateStandardControls(".btnOutlined.btn-lrg", outLinedLargeButtonStyles[this.deviceName] ,"OutLined Large Buttons", "Style Validation");
     await this.validateStandardControls(".btnOutlined.btn-mdm", outLinedMediumButtonStyles[this.deviceName] ,"OutLined Medium Buttons", "Style Validation");
     await this.validateStandardControls(".btnOutlined.btn-sml.rounded-pill", outLinedSmallButtonStyles[this.deviceName] ,"OutLined Small Buttons", "Style Validation");
- 
+      await this.validateStandardControls("h1", headingH1Styles[this.deviceName] ,"Heading", "Style Validation");
+
   }
 
   private async validateStandardControls(selector, styleMapping, controlTitle, controlDescription ) {

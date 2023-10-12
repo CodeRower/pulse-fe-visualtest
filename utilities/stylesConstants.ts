@@ -1,23 +1,4 @@
 export const primaryButtonStyles = {
-  // chromium: {
-  //   backgroundColor: "rgb(43, 95, 71)",
-  //   borderRadius: "800px",
-  // },
-  // "chromium-ipad-landscape": {
-  //   backgroundColor: "rgb(43, 95, 71)",
-  //   borderRadius: "800px",
-  // },
-  // "chromium-ipad-portrait": {
-  //   backgroundColor: "rgb(43, 95, 71)",
-  //   borderRadius: "800px",
-  // },
-  // MobileChrome: {
-  //   backgroundColor: "rgb(43, 95, 71)",
-  //   borderRadius: "800px",
-  //   height : "36px",
-  //   fontSize : "16px" ,
-  // border :"0.5px solid #EAEFED"  },
-
   chromium: {
     backgroundColor: "#2B5F47",
     borderRadius: "800px",
@@ -453,10 +434,10 @@ export const outLinedSmallButtonStyles = {
 };
 //---------OutLined Buttons End--------//
 
-//empty field
-export const textInputFormControlStyles = {
+//Empty Input Filled
+export const emptyInputStyles = {
   chromium: {
-    backgroundColor: "#EAEFED",
+    backgroundColor: "rgb(234, 239, 237)",
     borderRadius: "6px",
     height: "56px",
     fontSize: "16px",
@@ -465,7 +446,7 @@ export const textInputFormControlStyles = {
     border: "1px solid rgb(196, 175, 137)",
   },
   "chromium-ipad-landscape": {
-    backgroundColor: "#EAEFED",
+    backgroundColor:  "rgb(234, 239, 237)",
     borderRadius: "6px",
     height: "56px",
     fontSize: "16px",
@@ -474,7 +455,7 @@ export const textInputFormControlStyles = {
     border: "1px solid rgb(196, 175, 137)",
   },
   "chromium-ipad-portrait": {
-    backgroundColor: "#EAEFED",
+    backgroundColor:  "rgb(234, 239, 237)",
     borderRadius: "6px",
     height: "56px",
     fontSize: "16px",
@@ -483,7 +464,7 @@ export const textInputFormControlStyles = {
     border: "1px solid rgb(196, 175, 137)",
   },
   MobileChrome: {
-    backgroundColor: "#EAEFED",
+    backgroundColor: "rgb(234, 239, 237)",
     borderRadius: "6px",
     height: "56px",
     fontSize: "16px",
@@ -493,10 +474,10 @@ export const textInputFormControlStyles = {
   },
 };
 
-//for filled  field
-export const textInputForFilledControlStyles = {
+//Filled Input Field
+export const filledInputStyles = {
   chromium: {
-    backgroundColor: "rgb(255, 255, 255)",
+    backgroundColor: "rgb(234, 239, 237)",
     borderRadius: "6px",
     height: "56px",
     fontSize: "16px",
@@ -505,7 +486,7 @@ export const textInputForFilledControlStyles = {
     border: "1px solid rgb(196, 175, 137)",
   },
   "chromium-ipad-landscape": {
-    backgroundColor: "rgb(255, 255, 255)",
+    backgroundColor: "rgb(234, 239, 237)",
     borderRadius: "6px",
     height: "56px",
     fontSize: "16px",
@@ -514,7 +495,7 @@ export const textInputForFilledControlStyles = {
     border: "1px solid rgb(196, 175, 137)",
   },
   "chromium-ipad-portrait": {
-    backgroundColor: "rgb(255, 255, 255)",
+    backgroundColor: "rgb(234, 239, 237)",
     borderRadius: "6px",
     height: "56px",
     fontSize: "16px",
@@ -523,7 +504,7 @@ export const textInputForFilledControlStyles = {
     border: "1px solid rgb(196, 175, 137)",
   },
   MobileChrome: {
-    backgroundColor: "rgb(255, 255, 255)",
+    backgroundColor: "rgb(234, 239, 237)",
     borderRadius: "6px",
     height: "56px",
     fontSize: "16px",
@@ -533,11 +514,11 @@ export const textInputForFilledControlStyles = {
   },
 };
 
-//for error field
+//Error Input Field
 
-export const ForErrorFieldControlStyles = {
+export const errorInputStyles = {
   chromium: {
-    backgroundColor: "rgba(38, 50, 56, )",
+    backgroundColor: "rgba(38, 50, 56 )",
     borderRadius: "6px",
     height: "56px",
     fontSize: "16px",
@@ -574,46 +555,6 @@ export const ForErrorFieldControlStyles = {
   },
 };
 
-//for error field
-
-export const textInputForErrorFieldControlStyles = {
-  chromium: {
-    backgroundColor: "#FEEEEE",
-    borderRadius: "6px",
-    height: "56px",
-    fontSize: "16px",
-    fontColor: "#433C3C",
-    fontWeight: "400",
-    border: "0.5px solid #F58989",
-  },
-  "chromium-ipad-landscape": {
-    backgroundColor: "#FEEEEE",
-    borderRadius: "6px",
-    height: "56px",
-    fontSize: "16px",
-    fontColor: "#433C3C",
-    fontWeight: "400",
-    border: "0.5px solid #F58989",
-  },
-  "chromium-ipad-portrait": {
-    backgroundColor: "#FEEEEE",
-    borderRadius: "6px",
-    height: "56px",
-    fontSize: "16px",
-    fontColor: "#433C3C",
-    fontWeight: "400",
-    border: "0.5px solid #F58989",
-  },
-  MobileChrome: {
-    backgroundColor: "#FEEEEE",
-    borderRadius: "6px",
-    height: "36px",
-    fontSize: "14px",
-    fontColor: "#433C3C",
-    fontWeight: "400",
-    border: "0.5px solid #F58989",
-  },
-};
 
 //-----Heading and paragraph style
 export const headingH1Styles = {

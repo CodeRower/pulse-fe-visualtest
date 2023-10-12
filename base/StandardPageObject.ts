@@ -15,13 +15,15 @@ import {
   outLinedMediumButtonStyles,
   outLinedSmallButtonStyles,
   primaryButtonStyles,
-  textInputFormControlStyles,
   headingH1Styles,
   headingH2Styles,
   headingH3Styles,
   headingH4Styles,
   paragraphPStyles,
   headingH6Styles,
+  emptyInputStyles,
+  filledInputStyles,
+  errorInputStyles,
 } from "../utilities/stylesConstants";
 
 export class StandardPageObject {
@@ -36,17 +38,19 @@ export class StandardPageObject {
   }
 
   async executeStandardTests() {
-    await this.validateStandardControls("input[type='text'].form-control", textInputFormControlStyles[this.deviceName] ,"TextFormFieldsControls", "Style Validation");
-    await this.validateStandardControls(".btn-primary ", primaryButtonStyles[this.deviceName] ,"PrimaryButtons", "Style Validation");
-    await this.validateStandardControls(".bg-light", lightButtonStyles[this.deviceName] ,"LightButtons", "Style Validation");
-    await this.validateStandardControls(".btnFilled.btn-lrg", filledLargeButtonStyles[this.deviceName] ,"Filled Large Buttons", "Style Validation");
-    await this.validateStandardControls(".btnFilled.btn-mdm", filledMediumButtonStyles[this.deviceName] ,"Filled Medium Buttons", "Style Validation");
-    await this.validateStandardControls(".btnFilled.btn-sml", filledSmallButtonStyles[this.deviceName] ,"Filled Small Buttons", "Style Validation");
-    await this.validateStandardControls(".btnLight.btn-lrg", lightLargeButtonStyles[this.deviceName] ,"Light Large Buttons", "Style Validation");
-    await this.validateStandardControls(".btnLight.btn-mdm", lightMediumButtonStyles[this.deviceName] ,"Light Medium Buttons", "Style Validation");
-    await this.validateStandardControls(".btnLight.btn-sml", lightSmallButtonStyles[this.deviceName] ,"Light Small Buttons", "Style Validation");
-    await this.validateStandardControls(".btnOutlined.btn-lrg", outLinedLargeButtonStyles[this.deviceName] ,"OutLined Large Buttons", "Style Validation");
-    await this.validateStandardControls(".btnOutlined.btn-mdm", outLinedMediumButtonStyles[this.deviceName] ,"OutLined Medium Buttons", "Style Validation");
+    await this.validateStandardControls(".inputEmpty", emptyInputStyles[this.deviceName] ,"Empty Input Field", "Style Validation");
+    await this.validateStandardControls(".inputFilled", filledInputStyles[this.deviceName] ,"Filled Input Field", "Style Validation");
+    await this.validateStandardControls(".inputError", errorInputStyles[this.deviceName] ,"Error Input Field", "Style Validation");
+    // await this.validateStandardControls(".btn-primary ", primaryButtonStyles[this.deviceName] ,"PrimaryButtons", "Style Validation");
+    // await this.validateStandardControls(".bg-light", lightButtonStyles[this.deviceName] ,"LightButtons", "Style Validation");
+    await this.validateStandardControls(".btnFilled.btn-lrg.rounded-pill", filledLargeButtonStyles[this.deviceName] ,"Filled Large Buttons", "Style Validation");
+    await this.validateStandardControls(".btnFilled.btn-mdm.rounded-pill", filledMediumButtonStyles[this.deviceName] ,"Filled Medium Buttons", "Style Validation");
+    await this.validateStandardControls(".btnFilled.btn-sml.rounded-pill", filledSmallButtonStyles[this.deviceName] ,"Filled Small Buttons", "Style Validation");
+    await this.validateStandardControls(".btnLight.btn-lrg.rounded-pill", lightLargeButtonStyles[this.deviceName] ,"Light Large Buttons", "Style Validation");
+    await this.validateStandardControls(".btnLight.btn-mdm.rounded-pill", lightMediumButtonStyles[this.deviceName] ,"Light Medium Buttons", "Style Validation");
+    await this.validateStandardControls(".btnLight.btn-sml.rounded-pill", lightSmallButtonStyles[this.deviceName] ,"Light Small Buttons", "Style Validation");
+    await this.validateStandardControls(".btnOutlined.btn-lrg.rounded-pill", outLinedLargeButtonStyles[this.deviceName] ,"OutLined Large Buttons", "Style Validation");
+    await this.validateStandardControls(".btnOutlined.btn-mdm.rounded-pill", outLinedMediumButtonStyles[this.deviceName] ,"OutLined Medium Buttons", "Style Validation");
     await this.validateStandardControls(".btnOutlined.btn-sml.rounded-pill", outLinedSmallButtonStyles[this.deviceName] ,"OutLined Small Buttons", "Style Validation");
     await this.validateStandardControls("h1", headingH1Styles[this.deviceName] ,"Heading H1", "Style Validation");
     await this.validateStandardControls("h2",headingH2Styles[this.deviceName] ,"Heading H2", "Style Validation");

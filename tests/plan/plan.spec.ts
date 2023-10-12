@@ -2,15 +2,15 @@ import { test, expect, chromium } from "@playwright/test";
 import { StandardPageObject } from "../../base/StandardPageObject";
 import { testUser } from "../../utilities/appConstants";
 
-const pageUrl = "http://localhost:3000/plan";
+const pageUrl = "https://pulse-frontend.web.app/plan";
 
 test("Plan Page", async ({ page }) => {
-  await page.goto("http://localhost:3000/auth/signin");
+  await page.goto("https://pulse-frontend.web.app/auth/signin");
   
   await page.getByPlaceholder("Email").fill(testUser.email);
   await page.getByPlaceholder("Password").fill(testUser.password);
   await page.getByRole("button", { name: " Log in with email" }).click();
-  await page.goto("http://localhost:3000/plan");
+  await page.goto("https://pulse-frontend.web.app/plan");
   await page.getByLabel("Select option").selectOption("eur");
   await page.getByLabel("Select option").selectOption("usd");
   await page.getByLabel("Select option").selectOption("inr");

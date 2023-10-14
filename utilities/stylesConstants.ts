@@ -438,7 +438,7 @@ export const outLinedSmallButtonStyles = {
 export const emptyInputStyles = {
   chromium: {
     backgroundColor: "rgb(255, 255, 255)",
-    borderRadius: "6px",
+    borderRadius: "8px",
     height: "56px",
     fontSize: "16px",
     fontWeight: "400",
@@ -447,7 +447,7 @@ export const emptyInputStyles = {
   },
   "chromium-ipad-landscape": {
     backgroundColor: "rgb(255, 255, 255)",
-    borderRadius: "6px",
+    borderRadius: "8px",
     height: "56px",
     fontSize: "16px",
     color: "rgb(33, 37, 41)",
@@ -456,7 +456,7 @@ export const emptyInputStyles = {
   },
   "chromium-ipad-portrait": {
     backgroundColor: "rgb(255, 255, 255)",
-    borderRadius: "6px",
+    borderRadius: "8px",
     height: "56px",
     fontSize: "16px",
     color: "rgb(33, 37, 41)",
@@ -465,7 +465,7 @@ export const emptyInputStyles = {
   },
   MobileChrome: {
     backgroundColor: "rgb(255, 255, 255)",
-    borderRadius: "6px",
+    borderRadius: "8px",
     height: "56px",
     fontSize: "16px",
     color: "rgb(33, 37, 41)",

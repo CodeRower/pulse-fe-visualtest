@@ -3,6 +3,6 @@ export const testUser = {
     password: "Pulse@1234"
 }
 export const trainerUser = {
-    email: "autotestuser@coderower.com",
-    password: "Pulse@1234"
+    email: "autotesttrainer@coderower.com",
+    password: "TPulse@1234"
 }

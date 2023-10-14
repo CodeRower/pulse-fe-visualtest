@@ -38,33 +38,33 @@ export class StandardPageObject {
   }
 
   async executeStandardTests() {
+    await this.validateStandardControls(".inputEmpty", emptyInputStyles[this.deviceName], "Empty Input Field", "Style Validation");
+    await this.validateStandardControls(".inputFilled", filledInputStyles[this.deviceName], "Filled Input Field", "Style Validation");
+    await this.validateStandardControls(".inputError", errorInputStyles[this.deviceName], "Error Input Field", "Style Validation");
     // await this.validateStandardControls(".btn-primary ", primaryButtonStyles[this.deviceName] ,"PrimaryButtons", "Style Validation");
     // await this.validateStandardControls(".bg-light", lightButtonStyles[this.deviceName] ,"LightButtons", "Style Validation");
-    await this.validateStandardControls(".btnFilled.btn-lrg.rounded-pill", filledLargeButtonStyles[this.deviceName] ,"Filled Large Buttons", "Style Validation");
-    await this.validateStandardControls(".btnFilled.btn-mdm.rounded-pill", filledMediumButtonStyles[this.deviceName] ,"Filled Medium Buttons", "Style Validation");
-    await this.validateStandardControls(".btnFilled.btn-sml.rounded-pill", filledSmallButtonStyles[this.deviceName] ,"Filled Small Buttons", "Style Validation");
-    await this.validateStandardControls(".btnLight.btn-lrg.rounded-pill", lightLargeButtonStyles[this.deviceName] ,"Light Large Buttons", "Style Validation");
-    await this.validateStandardControls(".btnLight.btn-mdm.rounded-pill", lightMediumButtonStyles[this.deviceName] ,"Light Medium Buttons", "Style Validation");
-    await this.validateStandardControls(".btnLight.btn-sml.rounded-pill", lightSmallButtonStyles[this.deviceName] ,"Light Small Buttons", "Style Validation");
-    await this.validateStandardControls(".btnOutlined.btn-lrg.rounded-pill", outLinedLargeButtonStyles[this.deviceName] ,"OutLined Large Buttons", "Style Validation");
-    await this.validateStandardControls(".btnOutlined.btn-mdm.rounded-pill", outLinedMediumButtonStyles[this.deviceName] ,"OutLined Medium Buttons", "Style Validation");
-    await this.validateStandardControls(".btnOutlined.btn-sml.rounded-pill", outLinedSmallButtonStyles[this.deviceName] ,"OutLined Small Buttons", "Style Validation");
-    await this.validateStandardControls(".form-control.inputEmpty", emptyInputStyles[this.deviceName] ,"Empty Input Field", "Style Validation");
-    await this.validateStandardControls(".form-control.inputFilled", filledInputStyles[this.deviceName] ,"Filled Input Field", "Style Validation");
-    await this.validateStandardControls(".form-control.inputError", errorInputStyles[this.deviceName] ,"Error Input Field", "Style Validation");
-    await this.validateStandardControls("h1", headingH1Styles[this.deviceName] ,"Heading H1", "Style Validation");
-    await this.validateStandardControls("h2",headingH2Styles[this.deviceName] ,"Heading H2", "Style Validation");
-    await this.validateStandardControls("h3",headingH3Styles[this.deviceName] ,"Heading H3", "Style Validation");
-    await this.validateStandardControls("h4",headingH4Styles[this.deviceName] ,"Heading H4", "Style Validation");
-    await this.validateStandardControls("p",paragraphPStyles[this.deviceName] ,"Paragraph P", "Style Validation");
-    await this.validateStandardControls("h6",headingH6Styles[this.deviceName] ,"Heading H6", "Style Validation");   
-}
+    await this.validateStandardControls(".btnFilled.btn-lrg.rounded-pill", filledLargeButtonStyles[this.deviceName], "Filled Large Buttons", "Style Validation");
+    await this.validateStandardControls(".btnFilled.btn-mdm.rounded-pill", filledMediumButtonStyles[this.deviceName], "Filled Medium Buttons", "Style Validation");
+    await this.validateStandardControls(".btnFilled.btn-sml.rounded-pill", filledSmallButtonStyles[this.deviceName], "Filled Small Buttons", "Style Validation");
+    await this.validateStandardControls(".btnLight.btn-lrg.rounded-pill", lightLargeButtonStyles[this.deviceName], "Light Large Buttons", "Style Validation");
+    await this.validateStandardControls(".btnLight.btn-mdm.rounded-pill", lightMediumButtonStyles[this.deviceName], "Light Medium Buttons", "Style Validation");
+    await this.validateStandardControls(".btnLight.btn-sml.rounded-pill", lightSmallButtonStyles[this.deviceName], "Light Small Buttons", "Style Validation");
+    await this.validateStandardControls(".btnOutlined.btn-lrg.rounded-pill", outLinedLargeButtonStyles[this.deviceName], "OutLined Large Buttons", "Style Validation");
+    await this.validateStandardControls(".btnOutlined.btn-mdm.rounded-pill", outLinedMediumButtonStyles[this.deviceName], "OutLined Medium Buttons", "Style Validation");
+    await this.validateStandardControls(".btnOutlined.btn-sml.rounded-pill", outLinedSmallButtonStyles[this.deviceName], "OutLined Small Buttons", "Style Validation");
+    await this.validateStandardControls("h1", headingH1Styles[this.deviceName], "Heading H1", "Style Validation","text");
+    await this.validateStandardControls("h2", headingH2Styles[this.deviceName], "Heading H2", "Style Validation","text");
+    await this.validateStandardControls("h3", headingH3Styles[this.deviceName], "Heading H3", "Style Validation","text");
+    await this.validateStandardControls("h4", headingH4Styles[this.deviceName], "Heading H4", "Style Validation","text");
+    await this.validateStandardControls("p", paragraphPStyles[this.deviceName], "Paragraph P", "Style Validation","text");
+    await this.validateStandardControls("h6", headingH6Styles[this.deviceName], "Heading H6", "Style Validation","text");
+  }
 
 
-  
 
 
-  private async validateStandardControls(selector, styleMapping, controlTitle, controlDescription ) {
+
+  private async validateStandardControls(selector, styleMapping, controlTitle, controlDescription, controlAttributeTypeForLogger = "attribute", controlAttributeForLogger = "name") {
     const deviceSpecificStyles = styleMapping;
     const controlUnderValidation = await this.page.locator(
       selector
@@ -80,9 +80,16 @@ export class StandardPageObject {
 
     if (controlUnderValidation && count > 0) {
       for (let i = 0; i < count; ++i) {
-        const nameOfElement = await controlUnderValidation
-          .nth(i)
-          .getAttribute("name");
+        let nameOfElement;
+        if (controlAttributeTypeForLogger === "attribute") {
+          nameOfElement = await controlUnderValidation
+            .nth(i)
+            .getAttribute(controlAttributeForLogger);
+        } else if (controlAttributeTypeForLogger === "text") {
+          nameOfElement = await controlUnderValidation
+            .nth(i)
+            .textContent();
+        }
         console.log(`VALIDATING: ${nameOfElement}`);
 
         const computedStyle = await controlUnderValidation

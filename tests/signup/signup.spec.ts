@@ -52,7 +52,7 @@ test('test invalid password', async ({ page }) => {
 });
 
 
-test('empty-place', async ({ page }) => {
+test('empty-firstName-lastName', async ({ page }) => {
   
   await page.goto('https://pulse-frontend.web.app/auth/signup');
   await page.getByPlaceholder('Email').click();
@@ -60,14 +60,55 @@ test('empty-place', async ({ page }) => {
   await page.getByPlaceholder('Password').click();
   await page.getByPlaceholder('Password').fill('Rohit@gmail.com');
   await page.getByRole('button', { name: ' Sign up with email' }).click();
+  
+  await expect(page).toHaveScreenshot({ fullPage: true });
+});
+
+
+test('empty-firstName', async ({ page }) => {
+  
+  await page.goto('https://pulse-frontend.web.app/auth/signup');
+  await page.getByPlaceholder('Last Name').click();
+  await page.getByPlaceholder('Last Name').fill('kumar');
+  await page.getByPlaceholder('Email').click();
+  await page.getByPlaceholder('Email').fill('Ramu5436@gmail.com');
+  await page.getByPlaceholder('Password').click();
+  await page.getByPlaceholder('Password').fill('Rohit@gmail.com');
+  await page.getByRole('button', { name: ' Sign up with email' }).click();
+
+  await expect(page).toHaveScreenshot({ fullPage: true });
+});
+
+
+test('empty-lastName', async ({ page }) => {
+  
+  await page.goto('https://pulse-frontend.web.app/auth/signup');
+  await page.getByPlaceholder('First Name').click();
+  await page.getByPlaceholder('First Name').fill('Rohit');
+  await page.getByPlaceholder('Email').click();
+  await page.getByPlaceholder('Email').fill('Ramu5436@gmail.com');
+  await page.getByPlaceholder('Password').click();
+  await page.getByPlaceholder('Password').fill('Rohit@gmail.com');
+  await page.getByRole('button', { name: ' Sign up with email' }).click();
+
+  await expect(page).toHaveScreenshot({ fullPage: true });
+});
+
+test('empty-password', async ({ page }) => {
+  
+  await page.goto('https://pulse-frontend.web.app/auth/signup');
   await page.getByPlaceholder('First Name').click();
   await page.getByPlaceholder('First Name').fill('Rohit');
   await page.getByPlaceholder('Last Name').click();
   await page.getByPlaceholder('Last Name').fill('kumar');
-  await page.getByPlaceholder('Password').click();
-  await page.getByPlaceholder('Password').click();
-  await page.getByPlaceholder('Password').fill('');
+  await page.getByPlaceholder('Email').click();
+  await page.getByPlaceholder('Email').fill('Ramu5436@gmail.com');
+
   await page.getByRole('button', { name: ' Sign up with email' }).click();
+
   await expect(page).toHaveScreenshot({ fullPage: true });
 });
+
+
+
 

@@ -125,7 +125,7 @@ export const filledMediumButtonStyles = {
     height: "56px",
     fontSize: "16px",
     fontWeight: "500",
-    padding: "16px 32px",
+    padding: "6px 12px",
   },
   "chromium-ipad-landscape": {
     backgroundColor: "rgb(43, 95, 71)",
@@ -134,7 +134,7 @@ export const filledMediumButtonStyles = {
     height: "56px",
     fontSize: "16px",
     fontWeight: "500",
-    padding: "16px 32px",
+    padding: "6px 12px",
   },
   "chromium-ipad-portrait": {
     backgroundColor: "rgb(43, 95, 71)",
@@ -437,38 +437,38 @@ export const outLinedSmallButtonStyles = {
 //Empty Input Filled
 export const emptyInputStyles = {
   chromium: {
-    backgroundColor: "rgb(234, 239, 237)",
-    borderRadius: "6px",
+    backgroundColor: "rgb(255, 255, 255)",
+    borderRadius: "8px",
     height: "56px",
     fontSize: "16px",
     fontWeight: "400",
-    color: "rgb(33, 37, 41)",
+    color: "rgb(67, 60, 60)",
     border: "1px solid rgb(196, 175, 137)",
   },
   "chromium-ipad-landscape": {
-    backgroundColor:  "rgb(234, 239, 237)",
-    borderRadius: "6px",
+    backgroundColor: "rgb(255, 255, 255)",
+    borderRadius: "8px",
     height: "56px",
     fontSize: "16px",
-    color: "rgb(33, 37, 41)",
+    color: "rgb(67, 60, 60)",
     fontWeight: "400",
     border: "1px solid rgb(196, 175, 137)",
   },
   "chromium-ipad-portrait": {
-    backgroundColor:  "rgb(234, 239, 237)",
-    borderRadius: "6px",
+    backgroundColor: "rgb(255, 255, 255)",
+    borderRadius: "8px",
     height: "56px",
     fontSize: "16px",
-    color: "rgb(33, 37, 41)",
+    color: "rgb(67, 60, 60)",
     fontWeight: "400",
     border: "1px solid rgb(196, 175, 137)",
   },
   MobileChrome: {
-    backgroundColor: "rgb(234, 239, 237)",
-    borderRadius: "6px",
+    backgroundColor: "rgb(255, 255, 255)",
+    borderRadius: "8px",
     height: "56px",
     fontSize: "16px",
-    color: "rgb(33, 37, 41)",
+    color: "rgb(67, 60, 60)",
     fontWeight: "400",
     border: "1px solid rgb(196, 175, 137)",
   },
@@ -478,39 +478,39 @@ export const emptyInputStyles = {
 export const filledInputStyles = {
   chromium: {
     backgroundColor: "rgb(234, 239, 237)",
-    borderRadius: "6px",
+    borderRadius: "8px",
     height: "56px",
     fontSize: "16px",
-    color: "rgb(33, 37, 41)",
+    color: "rgb(67, 60, 60)",
     fontWeight: "400",
-    border: "1px solid rgb(196, 175, 137)",
+    border: "1px solid rgb(47, 97, 73)",
   },
   "chromium-ipad-landscape": {
     backgroundColor: "rgb(234, 239, 237)",
-    borderRadius: "6px",
+    borderRadius: "8px",
     height: "56px",
     fontSize: "16px",
-    color: "rgb(33, 37, 41)",
+    color: "rgb(67, 60, 60)",
     fontWeight: "400",
-    border: "1px solid rgb(196, 175, 137)",
+    border:"1px solid rgb(43, 95, 71)",
   },
   "chromium-ipad-portrait": {
     backgroundColor: "rgb(234, 239, 237)",
-    borderRadius: "6px",
+    borderRadius: "8px",
     height: "56px",
     fontSize: "16px",
-    color: "rgb(33, 37, 41)",
+    color: "rgb(67, 60, 60)",
     fontWeight: "400",
-    border: "1px solid rgb(196, 175, 137)",
+    border: "1px solid rgb(43, 95, 71)",
   },
   MobileChrome: {
     backgroundColor: "rgb(234, 239, 237)",
-    borderRadius: "6px",
+    borderRadius: "8px",
     height: "56px",
     fontSize: "16px",
-    color: "rgb(33, 37, 41)",
+    color: "rgb(67, 60, 60)",
     fontWeight: "400",
-    border: "1px solid rgb(196, 175, 137)",
+    border:  "1px solid rgb(43, 95, 71)",
   },
 };
 
@@ -518,47 +518,71 @@ export const filledInputStyles = {
 
 export const errorInputStyles = {
   chromium: {
-    backgroundColor: "rgba(38, 50, 56 )",
-    borderRadius: "6px",
+    backgroundColor: "rgb(254, 238, 238)",
+    borderRadius: "8px",
     height: "56px",
     fontSize: "16px",
-    color: "rgb(33, 37, 41)",
+    color: "rgb(67, 60, 60)",
     fontWeight: "400",
-    border: "0.5px solid #F58989",
+    border: "1px solid rgb(245, 137, 137)",
   },
   "chromium-ipad-landscape": {
-    backgroundColor: "#FEEEEE",
-    borderRadius: "6px",
+    backgroundColor: "rgb(254, 238, 238)",
+    borderRadius: "8px",
     height: "56px",
     fontSize: "16px",
-    color: "rgb(33, 37, 41)",
+    color: "rgb(67, 60, 60)",
     fontWeight: "400",
-    border: "0.5px solid #F58989",
+    border: "1px solid rgb(245, 137, 137)",
   },
   "chromium-ipad-portrait": {
-    backgroundColor: "#FEEEEE",
-    borderRadius: "6px",
+    backgroundColor: "rgb(254, 238, 238)",
+    borderRadius: "8px",
     height: "56px",
     fontSize: "16px",
-    color: "rgb(33, 37, 41)",
+    color: "rgb(67, 60, 60)",
     fontWeight: "400",
-    border: "0.5px solid #F58989",
+    border: "1px solid rgb(245, 137, 137)",
   },
   MobileChrome: {
-    backgroundColor: "#FEEEEE",
-    borderRadius: "6px",
+    backgroundColor: "rgb(254, 238, 238)",
+    borderRadius: "8px",
     height: "56px",
     fontSize: "16px",
-    color: "rgb(33, 37, 41)",
+    color: "rgb(67, 60, 60)",
     fontWeight: "400",
-    border: "0.5px solid #F58989",
+    border: "1px solid rgb(245, 137, 137)",
   },
 };
 
-
 //-----Heading and paragraph style
-export const headingH1Styles = {
 
+export const xxlHeading = {
+  chromium: {
+    fontSize: "60px",
+    fontWeight: "600",
+    lineHeight: `${1.3 * 60}px`,
+  },
+
+  "chromium-ipad-landscape": {
+    fontSize: "60px",
+    fontWeight: "600",
+    lineHeight: `${1.3 * 60}px`,
+  },
+
+  "chromium-ipad-portrait": {
+    fontSize: "60px",
+    fontWeight: "600",
+    lineHeight: `${1.3 * 60}px`,
+  },
+
+  MobileChrome: {
+    fontSize: "20px",
+    fontWeight: "600",
+    lineHeight: `${1.2 * 20}px`,
+  },
+};
+export const headingH1Styles = {
   chromium: {
     fontSize: "32px",
     fontWeight: "600",

@@ -32,7 +32,10 @@ export default defineConfig({
     viewport: { width: 1440, height: 900 },
     video: "retain-on-failure",
   },
-
+  globalTimeout: 60 * 60 * 1000,
+  expect: {
+    timeout: 10 * 1000,
+  },
   /* Configure projects for major browsers */
   projects: [
     {

@@ -46,10 +46,10 @@ test("test invalid password in signin", async ({ page }) => {
   await expect(page).toHaveScreenshot({ fullPage: true });
 });
 
-test('empty-password-inSignIn', async ({ page }) => {
+//This test consist of error message for password in signIn page
+test.only('empty-password-inSignIn', async ({ page }) => {
   await page.goto('https://pulse-frontend.web.app/auth/signin');
-  await page.getByPlaceholder('Email').click();
-  await page.getByPlaceholder('Email').fill('');
+  await page.getByPlaceholder("Email").click();
   await page.getByPlaceholder('Email').fill('rana.mahato@coderower.com');
   await page.getByRole('button', { name: ' Log in with email' }).click();
 

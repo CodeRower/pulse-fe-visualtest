@@ -18,8 +18,8 @@ test("Trainer-list Page", async ({ page }) => {
   await expect(page).toHaveScreenshot({ fullPage: true });
 });
 
-// test("Validate Standard Tests", async ({ page }, workerInfo) => {
-//   const standardPage = new StandardPageObject(page, workerInfo);
-//   await page.goto("https://pulse-frontend.web.app/trainer-list");
-//   await standardPage.executeStandardTests();
-// });
+test("Validate Standard Tests", async ({ page }, workerInfo) => {
+  const standardPage = new StandardPageObject(page, workerInfo);
+  await page.goto("https://pulse-frontend.web.app/trainer-list");
+  await standardPage.executeStandardTests();
+});

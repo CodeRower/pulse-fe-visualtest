@@ -4,7 +4,7 @@ import { testUser } from "../../utilities/appConstants";
 import { delay } from "../../utilities/utils";
 const pageUrl = "https://pulse-frontend.web.app/birth";
 
-test.only("Birth Page", async ({ page, browser }) => {
+test("Birth Page", async ({ page, browser }) => {
   const userContext = await browser.newContext({
     storageState: "playwright/.auth/user.json",
   });
@@ -16,7 +16,7 @@ test.only("Birth Page", async ({ page, browser }) => {
   await expect(userPage).toHaveScreenshot({ fullPage: true });
 });
 
-test.only("Validate Standard Tests", async ({  browser }, workerInfo) => {
+test("Validate Standard Tests", async ({  browser }, workerInfo) => {
   const userContext = await browser.newContext({
     storageState: "playwright/.auth/user.json",
   });

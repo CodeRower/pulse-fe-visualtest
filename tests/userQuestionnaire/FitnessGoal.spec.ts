@@ -2,10 +2,10 @@ import { test, expect, chromium } from "@playwright/test";
 import { StandardPageObject } from "../../base/StandardPageObject";
 import { testUser } from "../../utilities/appConstants";
 import { delay } from "../../utilities/utils";
-const pageUrl = "http://localhost:3000/fitnessGoal";
+const pageUrl = "https://pulse-frontend.web.app/fitnessGoal";
 
 test("Fitness Goal page", async ({ page }) => {
-  await page.goto("http://localhost:3000/auth/signin");
+  await page.goto("https://pulse-frontend.web.app/auth/signin");
 
   await page.getByPlaceholder("Email").fill(testUser.email);
   await page.getByPlaceholder("Password").fill(testUser.password);

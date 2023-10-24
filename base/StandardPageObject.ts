@@ -39,12 +39,12 @@ export class StandardPageObject {
   }
 
   async executeStandardTests() {
-    await this.validateStandardControls("h1", headingH1Styles[this.deviceName], "Heading H1", "Style Validation","text");
-    await this.validateStandardControls("h2", headingH2Styles[this.deviceName], "Heading H2", "Style Validation","text");
-    await this.validateStandardControls("h3", headingH3Styles[this.deviceName], "Heading H3", "Style Validation","text");
-    await this.validateStandardControls("h4", headingH4Styles[this.deviceName], "Heading H4", "Style Validation","text");
-    await this.validateStandardControls("p", paragraphPStyles[this.deviceName], "Paragraph P", "Style Validation","text");
-    await this.validateStandardControls("h6", headingH6Styles[this.deviceName], "Heading H6", "Style Validation","text");
+    await this.validateStandardControls("h1", headingH1Styles[this.deviceName], "Heading H1", "text");
+    await this.validateStandardControls("h2", headingH2Styles[this.deviceName], "Heading H2", "text");
+    await this.validateStandardControls("h3", headingH3Styles[this.deviceName], "Heading H3", "text");
+    await this.validateStandardControls("h4", headingH4Styles[this.deviceName], "Heading H4", "text");
+    await this.validateStandardControls("p", paragraphPStyles[this.deviceName], "Paragraph P","text");
+    await this.validateStandardControls("h6", headingH6Styles[this.deviceName], "Heading H6", "text");
     await this.validateStandardControls(".inputEmpty", emptyInputStyles[this.deviceName], "Empty Input Field", "Style Validation");
     await this.validateStandardControls(".inputFilled", filledInputStyles[this.deviceName], "Filled Input Field", "Style Validation");
     await this.validateStandardControls(".inputError", errorInputStyles[this.deviceName], "Error Input Field", "Style Validation");

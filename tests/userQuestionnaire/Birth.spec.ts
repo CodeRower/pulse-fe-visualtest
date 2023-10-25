@@ -4,17 +4,14 @@ import { testUser } from "../../utilities/appConstants";
 import { delay } from "../../utilities/utils";
 const pageUrl = "https://pulse-frontend.web.app/birth";
 
-test("Birth Page", async ({ page }) => {
-  await page.goto("https://pulse-frontend.web.app/auth/signin");
-
-  await page.getByPlaceholder("Email").fill(testUser.email);
-  await page.getByPlaceholder("Password").fill(testUser.password);
-  await page.getByRole("button", { name: " Log in with email" }).click();
+test.only("Birth Page", async ({ page, browser }) => {
+  const userContext = await browser.newContext({
+    storageState: "playwright/.auth/user.json",
+  });
+  const userPage = await userContext.newPage();
+  await userPage.goto(pageUrl);
   await delay(2000);
-  await page.goto(pageUrl);
-
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveScreenshot({ fullPage: true });
+  await expect(userPage).toHaveScreenshot({ fullPage: true });
 });
 
 test("Validate Standard Tests", async ({ page }, workerInfo) => {

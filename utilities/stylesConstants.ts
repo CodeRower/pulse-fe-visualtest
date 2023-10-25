@@ -129,7 +129,7 @@ export const filledMediumButtonStyles = {
     height: "56px",
     fontSize: "16px",
     fontWeight: "500",
-    padding: "6px 12px",
+    padding: "16px 32px",
   },
   "chromium-ipad-landscape": {
     backgroundColor: "rgb(43, 95, 71)",
@@ -138,7 +138,7 @@ export const filledMediumButtonStyles = {
     height: "56px",
     fontSize: "16px",
     fontWeight: "500",
-    padding: "6px 12px",
+    padding: "16px 32px",
   },
   "chromium-ipad-portrait": {
     backgroundColor: "rgb(43, 95, 71)",
@@ -487,7 +487,7 @@ export const filledInputStyles = {
     fontSize: "16px",
     color: "rgb(67, 60, 60)",
     fontWeight: "400",
-    border: "1px solid rgb(47, 97, 73)",
+    border: "1px solid rgb(43, 95, 71)",
   },
   "chromium-ipad-landscape": {
     backgroundColor: "rgb(234, 239, 237)",
@@ -583,7 +583,7 @@ export const xxlHeading = {
   MobileChrome: {
     fontSize: "20px",
     fontWeight: "600",
-    lineHeight: `${1.2 * 20}px`,
+    lineHeight: `${1.3 * 20}px`,
   },
 };
 export const headingH1Styles = {

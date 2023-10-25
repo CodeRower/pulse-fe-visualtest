@@ -1,6 +1,5 @@
 import { test, expect, chromium } from "@playwright/test";
 import { StandardPageObject } from "../../base/StandardPageObject";
-import { testUser } from "../../utilities/appConstants";
 import { delay } from "../../utilities/utils";
 const pageUrl = "https://pulse-frontend.web.app/birth";
 

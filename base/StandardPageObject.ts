@@ -86,6 +86,12 @@ export class StandardPageObject {
           nameOfElement = await controlUnderValidation
             .nth(i)
             .getAttribute(controlAttributeForLogger);
+            // todo: temporary hak until names / test ids are assigned to all components
+          if(nameOfElement === null || nameOfElement === undefined){
+            nameOfElement = await controlUnderValidation
+            .nth(i)
+            .textContent();
+          }
         } else if (controlAttributeTypeForLogger === "text") {
           nameOfElement = await controlUnderValidation
             .nth(i)

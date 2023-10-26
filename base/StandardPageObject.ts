@@ -53,8 +53,10 @@ export class StandardPageObject {
     await this.validateStandardControls(".btnOutlined.btn-lrg.rounded-pill", outLinedLargeButtonStyles[this.deviceName], "OutLined Large Buttons", "Style Validation");
     await this.validateStandardControls(".btnOutlined.btn-mdm.rounded-pill", outLinedMediumButtonStyles[this.deviceName], "OutLined Medium Buttons", "Style Validation");
     await this.validateStandardControls(".btnOutlined.btn-sml.rounded-pill", outLinedSmallButtonStyles[this.deviceName], "OutLined Small Buttons", "Style Validation");
+    
     await this.validateStandardControls("h1.xxlHeading", xxlHeading[this.deviceName], "Extra Large Heading", "Style Validation",'text');    
-    await this.validateStandardControls("h1", headingH1Styles[this.deviceName], "Heading H1", "Style Validation","text");
+    await this.validateStandardControls("h1:not(.xxlHeading)", headingH1Styles[this.deviceName], "Heading H1", "Style Validation","text");
+
     await this.validateStandardControls("h2", headingH2Styles[this.deviceName], "Heading H2", "Style Validation","text");
     await this.validateStandardControls("h3", headingH3Styles[this.deviceName], "Heading H3", "Style Validation","text");
     await this.validateStandardControls("h4", headingH4Styles[this.deviceName], "Heading H4", "Style Validation","text");

@@ -50,3 +50,62 @@ test('test invalid password', async ({ page }) => {
   
   await expect(page).toHaveScreenshot({ fullPage: true });
 });
+
+//This test consist of error message for both firstname and last name
+test('empty-firstName-lastName', async ({ page }) => {
+  
+  await page.goto('https://pulse-frontend.web.app/auth/signup');
+  await page.getByPlaceholder('Email').click();
+  await page.getByPlaceholder('Email').fill('Ramu5436@gmail.com');
+  await page.getByPlaceholder('Password').click();
+  await page.getByPlaceholder('Password').fill('Rohit@gmail.com');
+  await page.getByRole('button', { name: ' Sign up with email' }).click();
+  
+  await expect(page).toHaveScreenshot({ fullPage: true });
+});
+
+//This test consist of error message for firstname 
+test('empty-firstName', async ({ page }) => {
+  await page.goto('https://pulse-frontend.web.app/auth/signup');
+  await page.getByPlaceholder('Last Name').click();
+  await page.getByPlaceholder('Last Name').fill('kumar');
+  await page.getByPlaceholder('Email').click();
+  await page.getByPlaceholder('Email').fill('Ramu5436@gmail.com');
+  await page.getByPlaceholder('Password').click();
+  await page.getByPlaceholder('Password').fill('Rohit@gmail.com');
+  await page.getByRole('button', { name: ' Sign up with email' }).click();
+
+  await expect(page).toHaveScreenshot({ fullPage: true });
+});
+
+//This test consist of error message for lastname
+test('empty-lastName', async ({ page }) => {
+  await page.goto('https://pulse-frontend.web.app/auth/signup');
+  await page.getByPlaceholder('First Name').click();
+  await page.getByPlaceholder('First Name').fill('Rohit');
+  await page.getByPlaceholder('Email').click();
+  await page.getByPlaceholder('Email').fill('Ramu5436@gmail.com');
+  await page.getByPlaceholder('Password').click();
+  await page.getByPlaceholder('Password').fill('Rohit@gmail.com');
+  await page.getByRole('button', { name: ' Sign up with email' }).click();
+
+  await expect(page).toHaveScreenshot({ fullPage: true });
+});
+
+//This test consist of error message for password
+test('empty-password', async ({ page }) => {
+  await page.goto('https://pulse-frontend.web.app/auth/signup');
+  await page.getByPlaceholder('First Name').click();
+  await page.getByPlaceholder('First Name').fill('Rohit');
+  await page.getByPlaceholder('Last Name').click();
+  await page.getByPlaceholder('Last Name').fill('kumar');
+  await page.getByPlaceholder('Email').click();
+  await page.getByPlaceholder('Email').fill('Ramu5436@gmail.com');
+  await page.getByRole('button', { name: ' Sign up with email' }).click();
+
+  await expect(page).toHaveScreenshot({ fullPage: true });
+});
+
+
+
+

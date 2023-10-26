@@ -46,6 +46,18 @@ test("test invalid password in signin", async ({ page }) => {
   await expect(page).toHaveScreenshot({ fullPage: true });
 });
 
+//This test consist of error message for password in signIn page
+test.only('empty-password-inSignIn', async ({ page }) => {
+  await page.goto('https://pulse-frontend.web.app/auth/signin');
+  await page.getByPlaceholder("Email").click();
+  await page.getByPlaceholder('Email').fill('rana.mahato@coderower.com');
+  await page.getByRole('button', { name: ' Log in with email' }).click();
+
+  await expect(page).toHaveScreenshot({ fullPage: true });
+});
+
+
+
 test("Validate Standard Tests", async ({ page }, workerInfo) => {
   const standardPage = new StandardPageObject(page, workerInfo);
   await page.goto(pageUrl);
@@ -53,3 +65,6 @@ test("Validate Standard Tests", async ({ page }, workerInfo) => {
   await page.getByPlaceholder("Email").fill("lockedUser@mail.com");
   await standardPage.executeStandardTests();
 });
+
+
+

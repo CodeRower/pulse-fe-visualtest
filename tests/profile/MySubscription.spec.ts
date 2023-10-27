@@ -1,10 +1,10 @@
-import { test, expect, chromium } from "@playwright/test";
+import { test, expect } from "@playwright/test";
 import { StandardPageObject } from "../../base/StandardPageObject";
+import { testUser } from "../../utilities/appConstants";
 import { delay } from "../../utilities/utils";
+const pageUrl = "https://pulse-frontend.web.app/my-subscription";
 
-const pageUrl = "https://pulse-frontend.web.app/profile";
-
-test("Profile Page", async ({ page, browser }) => {
+test("My subscription Page", async ({ page, browser }) => {
   const userContext = await browser.newContext({
     storageState: "playwright/.auth/user.json",
   });

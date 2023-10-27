@@ -18,7 +18,7 @@ test("Validate Standard Tests", async ({ page }, workerInfo) => {
 });
 
 test('Button Variant ', async ({ page }) => {
-  await page.goto('http://localhost:3000/typography');
+  await page.goto('https://pulse-frontend.web.app/typography');
   await page.getByRole('button', { name: 'Large Filled Button' }).click();
   await page.getByRole('button', { name: 'Large Light Button', exact: true }).click();
   await page.getByRole('button', { name: 'Large Outlined Button', exact: true }).click();

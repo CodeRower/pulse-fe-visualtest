@@ -12,6 +12,8 @@ test("Trainer Dashboard", async ({ browser }) => {
 
   await userPage.goto(pageUrl);
 
+  await delay(5000);
+
   // Expect a title "to contain" a substring.
   await expect(userPage).toHaveScreenshot({ fullPage: true });
 });

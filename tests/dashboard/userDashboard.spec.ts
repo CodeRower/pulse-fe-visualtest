@@ -1,10 +1,14 @@
 import { test, expect } from "playwright/test";
 
+import { delay } from "../../utilities/utils";
+
 const pageUrl = "https://pulse-frontend.web.app";
 test.use({ storageState: "playwright/.auth/user.json" });
 
 test("User Dashboard", async ({ page }) => {
   await page.goto(pageUrl);
+
+  await delay(5000);
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveScreenshot({ fullPage: true });

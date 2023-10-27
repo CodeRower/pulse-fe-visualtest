@@ -1,4 +1,5 @@
 import { test, expect } from "playwright/test";
+import { delay } from "../../utilities/utils";
 
 const pageUrl = "https://pulse-frontend.web.app";
 
@@ -9,6 +10,8 @@ test("Trainer Dashboard", async ({ browser }) => {
   const userPage = await userContext.newPage();
 
   await userPage.goto(pageUrl);
+
+  await delay(5000);
 
   // Expect a title "to contain" a substring.
   await expect(userPage).toHaveScreenshot({ fullPage: true });

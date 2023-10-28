@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { StandardPageObject } from "../../base/StandardPageObject";
-import { testUser } from "../../utilities/appConstants";
+
 import { delay } from "../../utilities/utils";
 const pageUrl = "https://pulse-frontend.web.app/profile";
 
@@ -10,8 +10,9 @@ test("Sign out Page", async ({ page, browser }) => {
   });
   const userPage = await userContext.newPage();
   await userPage.goto(pageUrl);
+  
+  await page.getByText("signout").click()
   await delay(2000);
-  await page.getByText("signout").click();
   await expect(page).toHaveScreenshot({ fullPage: true });
   await page.getByRole("button", { name: "Yes" }).click();
   // Expect a title "to contain" a substring.

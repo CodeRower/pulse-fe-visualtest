@@ -1,6 +1,5 @@
 import { test, expect } from "@playwright/test";
 import { StandardPageObject } from "../../base/StandardPageObject";
-
 const pageUrl = "https://pulse-frontend.web.app/auth/signin";
 
 test("Signin Page", async ({ page }) => {
@@ -10,8 +9,14 @@ test("Signin Page", async ({ page }) => {
   await expect(page).toHaveScreenshot({ fullPage: true });
 });
 
+test("Validate Standard Tests", async ({ page }, workerInfo) => {
+  const standardPage = new StandardPageObject(page, workerInfo);
+  await page.goto(pageUrl);
+  await standardPage.executeStandardTests();
+});
+
 test("User Account Locked", async ({ page }) => {
-  await page.goto("https://pulse-frontend.web.app/auth/signin");
+  await page.goto(pageUrl);
   await page.getByPlaceholder("Email").click();
   await page.getByPlaceholder("Email").fill("lockedUser@mail.com");
   await page.getByPlaceholder("Password").click();
@@ -25,7 +30,7 @@ test("User Account Locked", async ({ page }) => {
 });
 
 test("test invalid email in signin", async ({ page }) => {
-  await page.goto("https://pulse-frontend.web.app/auth/signin");
+  await page.goto(pageUrl);
   await page.getByPlaceholder("Email").click();
   await page.getByPlaceholder("Email").fill("rana@");
   await page.getByPlaceholder("Password").click();
@@ -36,7 +41,7 @@ test("test invalid email in signin", async ({ page }) => {
 });
 
 test("test invalid password in signin", async ({ page }) => {
-  await page.goto("https://pulse-frontend.web.app/auth/signin");
+  await page.goto(pageUrl);
   await page.getByPlaceholder("Email").click();
   await page.getByPlaceholder("Email").fill("rana@gmail.com");
   await page.getByPlaceholder("Password").click();
@@ -46,10 +51,4 @@ test("test invalid password in signin", async ({ page }) => {
   await expect(page).toHaveScreenshot({ fullPage: true });
 });
 
-test("Validate Standard Tests", async ({ page }, workerInfo) => {
-  const standardPage = new StandardPageObject(page, workerInfo);
-  await page.goto(pageUrl);
-  await page.getByPlaceholder("Email").click();
-  await page.getByPlaceholder("Email").fill("lockedUser@mail.com");
-  await standardPage.executeStandardTests();
-});
+

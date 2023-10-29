@@ -1,7 +1,6 @@
-import { expect, test } from "playwright/test";
-import { StandardPageObject } from "../../base/StandardPageObject";
-import { trainerUser } from "../../utilities/appConstants";
+import { test, expect } from "playwright/test";
 import { delay } from "../../utilities/utils";
+import { StandardPageObject } from "../../base/StandardPageObject";
 
 const pageUrl = "https://pulse-frontend.web.app";
 
@@ -23,6 +22,19 @@ test("Validate Standard Tests", async ({ browser }, workerInfo) => {
   const userPage = await userContext.newPage();
   await userPage.goto(pageUrl);
   await delay(5000);
+  const standardPage = new StandardPageObject(userPage, workerInfo);
+  await standardPage.executeStandardTests();
+});
+
+
+test("Validate Standard Tests", async ({ browser }, workerInfo) => {
+  const userContext = await browser.newContext({
+    storageState: "playwright/.auth/user.json",
+  });
+  const userPage = await userContext.newPage();
+  await userPage.goto(pageUrl);
+  await delay(2000);
+
   const standardPage = new StandardPageObject(userPage, workerInfo);
   await standardPage.executeStandardTests();
 });

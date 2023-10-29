@@ -1,18 +1,29 @@
 import { test, expect } from "@playwright/test";
-import { primaryButtonStyles } from "../../utilities/stylesConstants";
-import { logStyle } from "../../utilities/logger";
 import { StandardPageObject } from "../../base/StandardPageObject";
+import { delay } from "../../utilities/utils";
 
-test("Join Page", async ({ page }) => {
-  await page.goto("https://pulse-frontend.web.app/join");
+
+const pageUrl = "https://pulse-frontend.web.app/join";
+test("Join Page", async ({ page, browser }) => {
+  const userContext = await browser.newContext({
+    storageState: "playwright/.auth/user.json",
+  });
+  const userPage = await userContext.newPage();
+  await userPage.goto(pageUrl);
+  await delay(2000);
 
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveScreenshot({ fullPage: true });
+  await expect(userPage).toHaveScreenshot({ fullPage: true });
 });
 
+test("Validate Standard Tests", async ({ browser }, workerInfo) => {
+  const userContext = await browser.newContext({
+    storageState: "playwright/.auth/user.json",
+  });
+  const userPage = await userContext.newPage();
+  await userPage.goto(pageUrl);
+  await delay(2000);
 
-test("Validate Standard Tests", async ({ page }, workerInfo) => {
-  const standardPage = new StandardPageObject(page, workerInfo);
-  await page.goto("https://pulse-frontend.web.app/join"); 
+  const standardPage = new StandardPageObject(userPage, workerInfo);
   await standardPage.executeStandardTests();
 });

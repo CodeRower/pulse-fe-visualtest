@@ -1,8 +1,6 @@
 import { test, expect } from "playwright/test";
-
 import { delay } from "../../utilities/utils";
 import { StandardPageObject } from "../../base/StandardPageObject";
-import { testUser } from "../../utilities/appConstants";
 
 const pageUrl = "https://pulse-frontend.web.app";
 test.use({ storageState: "playwright/.auth/user.json" });

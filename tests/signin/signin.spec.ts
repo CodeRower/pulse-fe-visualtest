@@ -1,5 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { StandardPageObject } from "../../base/StandardPageObject";
+import { delay } from "../../utilities/utils";
+
 const pageUrl = "https://pulse-frontend.web.app/auth/signin";
 
 test("Signin Page", async ({ page }) => {
@@ -9,11 +11,6 @@ test("Signin Page", async ({ page }) => {
   await expect(page).toHaveScreenshot({ fullPage: true });
 });
 
-test("Validate Standard Tests", async ({ page }, workerInfo) => {
-  const standardPage = new StandardPageObject(page, workerInfo);
-  await page.goto(pageUrl);
-  await standardPage.executeStandardTests();
-});
 
 test("User Account Locked", async ({ page }) => {
   await page.goto(pageUrl);
@@ -52,3 +49,16 @@ test("test invalid password in signin", async ({ page }) => {
 });
 
 
+
+
+test("Validate Standard Tests", async ({ browser }, workerInfo) => {
+  const userContext = await browser.newContext({
+    storageState: "playwright/.auth/user.json",
+  });
+  const userPage = await userContext.newPage();
+  await userPage.goto(pageUrl);
+  await delay(2000);
+
+  const standardPage = new StandardPageObject(userPage, workerInfo);
+  await standardPage.executeStandardTests();
+});

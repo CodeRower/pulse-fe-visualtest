@@ -1,7 +1,6 @@
-import { expect, test } from "playwright/test";
-import { StandardPageObject } from "../../base/StandardPageObject";
-import { trainerUser } from "../../utilities/appConstants";
+import { test, expect } from "playwright/test";
 import { delay } from "../../utilities/utils";
+import { StandardPageObject } from "../../base/StandardPageObject";
 
 const pageUrl = "https://pulse-frontend.web.app";
 

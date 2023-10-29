@@ -2,30 +2,30 @@
   "cookies": [
     {
       "name": "m",
-      "value": "bea34e3a-1f36-45e9-9406-728f2420aaadcbdafa",
+      "value": "a4e0a5c1-6a3d-4816-bdfa-af54c28a93aff3bc8f",
       "domain": "m.stripe.com",
       "path": "/",
-      "expires": 1732978345.922446,
+      "expires": 1732979514.60624,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "__stripe_mid",
-      "value": "2d4adeb6-96ac-4732-b95f-9a0ec006a87cbcb636",
+      "value": "3504e319-badb-4780-989b-da9a084295d25f52d2",
       "domain": ".pulse-frontend.web.app",
       "path": "/",
-      "expires": 1729954345,
+      "expires": 1729955514,
       "httpOnly": false,
       "secure": true,
       "sameSite": "Strict"
     },
     {
       "name": "__stripe_sid",
-      "value": "038e2587-ac93-4e73-a6cd-101e1543638d756233",
+      "value": "d62d6ccf-e03e-4854-8733-46fcbf155c424c1d84",
       "domain": ".pulse-frontend.web.app",
       "path": "/",
-      "expires": 1698420145,
+      "expires": 1698421314,
       "httpOnly": false,
       "secure": true,
       "sameSite": "Strict"
@@ -45,7 +45,7 @@
         },
         {
           "name": "jwt",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MGYwN2IwMzUxMGRiMGFjMjc3NzkyYyIsImlhdCI6MTY5ODQxODM0NiwiZXhwIjoxNjk5MDIzMTQ2fQ.MXEWPJu4g9VRPdjXKa2aTaS0jTBOsg0IZCpeUaPhJlk"
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MGYwN2IwMzUxMGRiMGFjMjc3NzkyYyIsImlhdCI6MTY5ODQxOTUxNCwiZXhwIjoxNjk5MDI0MzE0fQ.mcpJSOOxooQ63BYRC3stikTkWXee4Y7S1C0oJ68rZPc"
         }
       ]
     }
